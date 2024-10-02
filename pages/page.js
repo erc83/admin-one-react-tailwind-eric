@@ -18,9 +18,5 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page) {
-  return (
-    <LayoutAuthenticated>
-      {page}
-    </LayoutAuthenticated>
-  )
+  return <LayoutAuthenticated>{page}</LayoutAuthenticated>
 }
