@@ -35,3 +35,18 @@ export type BgKey = "purplePink" | "pinkRed"
 
 
 export type StyleKey = 'white' | 'basic'
+
+
+export type TransactionType = 'withdraw' | 'deposit' | 'invoice' | 'payment'
+
+export type Transaction = {
+    id: number
+    amount: number
+    account: string
+    name: string
+    date: string
+    type: TransactionType
+    business: string
+}
+
+export type TrendType = 'up' | 'down' | 'success' | 'danger' | 'warning' | 'info'

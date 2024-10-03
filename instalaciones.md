@@ -4,6 +4,8 @@
 
 > yarn add @types/node @types/react-redux -D
 
+> yarn add swr
+
 
 
 

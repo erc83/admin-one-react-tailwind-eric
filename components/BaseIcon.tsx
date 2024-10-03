@@ -1,15 +1,16 @@
 import React from 'react'
 
 type Props = {
-  path: string,
-  w?: string,
-  h?: string,
-  size?: string|number|null,
-  className?: string,
+  path: string
+  w?: string
+  h?: string
+  size?: string|number|null
+  className?: string
 }
 
 
 export default function BaseIcon({ path, w = 'w-6', h = 'h-6', size, className }: Props ) {
+  
   const iconSize = size ?? 16
 
   return (
