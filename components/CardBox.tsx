@@ -3,16 +3,17 @@ import CardBoxComponentBody from './CardBoxComponentBody'
 import CardBoxComponentFooter from './CardBoxComponentFooter'
 
 type Props = {
-  rounded?: string,
-  flex?: string,
-  className?: string,
-  hasComponentLayout?: boolean,
-  hasTable?: boolean,
-  isForm?: boolean,
-  isHoverable?: boolean,
-  isModal?: boolean,
-  children: ReactNode,
+  rounded?: string
+  flex?: string
+  className?: string
+  hasComponentLayout?: boolean
+  hasTable?: boolean
+  isForm?: boolean
+  isHoverable?: boolean
+  isModal?: boolean
+  children: ReactNode
   footer?: ReactNode
+  onClick?: Function
 }
 
 
@@ -26,7 +27,8 @@ export default function CardBox({
   isHoverable=false, 
   isModal=false, 
   children, 
-  footer
+  footer,
+  onClick
 }: Props) {
   const componentClass = [
     'bg-white flex',
@@ -42,7 +44,7 @@ export default function CardBox({
 
   return React.createElement(
     isForm ? 'form' : 'div',
-    { className: componentClass.join(' ') },
+    { className: componentClass.join(' '), onClick },
     hasComponentLayout ? (
       children
     ) : (

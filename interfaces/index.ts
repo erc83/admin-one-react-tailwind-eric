@@ -1,29 +1,29 @@
 export type UserPayloadObject = {
-    name: string,
-    email: string,
+    name: string
+    email: string
     avatar: string
 }
 
 export type MenuAsideItem = {
-    label?: string,
-    icon?: string,
-    href?: string,
-    target?: string,
-    color?: string,
-    isLogout?: boolean,
+    label?: string
+    icon?: string
+    href?: string
+    target?: string
+    color?: string
+    isLogout?: boolean
     menu?: MenuAsideItem[]
 }
 
 export type MenuNavBarItem = {
-    label?: string,
-    icon?: string,
-    href?: string,
-    target?: string,
-    isDivider?: boolean,
-    isLogout?: boolean,
-    isDesktopNoLabel?: boolean,
-    isToggleLightDark?: boolean,
-    isCurrentUser?: boolean,
+    label?: string
+    icon?: string
+    href?: string
+    target?: string
+    isDivider?: boolean
+    isLogout?: boolean
+    isDesktopNoLabel?: boolean
+    isToggleLightDark?: boolean
+    isCurrentUser?: boolean
     menu?: MenuNavBarItem[]
 }
 
@@ -33,3 +33,5 @@ export type ColorButtonKey = "white" | "whiteDark" | "lightDark " | "contrast" |
 
 export type BgKey = "purplePink" | "pinkRed"
 
+
+export type StyleKey = 'white' | 'basic'

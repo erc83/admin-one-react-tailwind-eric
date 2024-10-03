@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  basePath: "",
+  basePath: "/admin-one-react-tailwind",
   images: {
     remotePatterns: [
       {
