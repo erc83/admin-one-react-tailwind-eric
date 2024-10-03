@@ -17,15 +17,15 @@ import { useSampleClients, useSampleTransactions } from '../hooks/sampleData'
 import BaseButton from '../components/BaseButton'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import CardBoxWidget from '../components/CardBoxWIdget'
+import { Transaction, Client } from '../interfaces'
+import CardBoxTransaction from '../components/CardBoxTransaction'
+import CardBoxClient from '../components/CardBoxClient'
 
 const Dashboard = () => {
-
     const { clients } = useSampleClients()
     const { transactions } = useSampleTransactions()
 
     const clientsListed = clients.slice(0, 4)
-
-
 
     return (
         <>
@@ -76,16 +76,27 @@ const Dashboard = () => {
                         label="Performance"
                     />
                 </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <div className="flex flex-col justify-between">
+                        {
+                            transactions.map((transaction: Transaction)=> (
+                                <CardBoxTransaction key={transaction.id} transaction={transaction} />
+                            ))
+                        }
+                    </div>
+                    <div className="flex flex-col justity-between">
+                        {
+                            clientsListed.map((client: Client) =>(
+                                <CardBoxClient key={client.id} client={client} />
+                            ))
+                        }
+                    </div>        
+                </div>
+
             </SectionMain>
         </>
     )
-
-
 }
-
-
-
-
-
 
 export default Dashboard
