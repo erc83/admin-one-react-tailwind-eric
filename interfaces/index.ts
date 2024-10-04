@@ -5,7 +5,7 @@ export type UserPayloadObject = {
 }
 
 export type MenuAsideItem = {
-    label?: string
+    label: string
     icon?: string
     href?: string
     target?: string

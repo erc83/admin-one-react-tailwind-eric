@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { mdiMinus, mdiPlus } from '@mdi/js'
 import BaseIcon from './BaseIcon'
 import Link from 'next/link'
@@ -6,25 +6,57 @@ import { getButtonColor } from '../src/colors'
 import AsideMenuList from './AsideMenuList'
 import { MenuAsideItem } from '../interfaces'
 import { useAppSelector } from '../src/stores/hooks'
+import { useRouter } from 'next/router'
 
 type Props = {
-  item: MenuAsideItem,
-  isDropdownList?: boolean,
+  item: MenuAsideItem
+  isDropdownList?: boolean
 }
 
-export default function AsideMenuItem({ item, isDropdownList = false }: Props  ) {
+const  AsideMenuItem = ({ item, isDropdownList = false }: Props  ) => {
+  const [isLinkActive, setIsLinkActive] = useState(false)
   const [isDropdownActive, setIsDropdownActive] = useState(false)
+
   const asideMenuItemStyle = useAppSelector((state) => state.style.asideMenuItemStyle)
   const asideMenuDropdownStyle = useAppSelector((state) => state.style.asideMenuDropdownStyle)
+  const asideMenuItemActiveStyle = useAppSelector((state) => state.style.asideMenuItemActiveStyle)
+
+  const activeClassAddon = !item.color && isLinkActive ? asideMenuItemActiveStyle : ''
+
+  const { asPath, isReady } = useRouter()
+
+  useEffect(() => {
+    if(item.href && isReady){
+      const linkPathName = new URL(item.href, location.href).pathname
+
+      const activePathname = new URL(asPath, location.href).pathname
+
+      setIsLinkActive(linkPathName === activePathname)
+    }
+  })
+
+
 
   const asideMenuItemInnerContents = (
     <>
-      {item.icon && <BaseIcon path={item.icon} className="flex-none" w="w-16" size="18" />}
-      <span className={`grow text-ellipsis line-clamp-1 ${item.menu ? '' : 'pr-12'}`}>
+      {
+        item.icon && (
+          <BaseIcon path={item.icon} className={`flex-none" ${activeClassAddon} w="w-16" size="18`} />
+      )}
+
+      <span 
+        className={`grow text-ellipsis line-clamp-1 ${
+          item.menu ? '' : 'pr-12'
+        } ${activeClassAddon} `}
+      >
         {item.label}
       </span>
       {item.menu && (
-        <BaseIcon path={isDropdownActive ? mdiMinus : mdiPlus} className="flex-none" w="w-12" />
+        <BaseIcon 
+          path={isDropdownActive ? mdiMinus : mdiPlus} 
+          className={`flex-none ${activeClassAddon}`} 
+          w="w-12" 
+        />
       )}
     </>
   )
@@ -40,11 +72,15 @@ export default function AsideMenuItem({ item, isDropdownList = false }: Props  )
   return (
     <li>
       {item.href && (
-        <Link href={item.href} target={item.target} className={componentClass}>
+        <Link href={item.href} target={item.target} className={componentClass} passHref>
           {asideMenuItemInnerContents}
         </Link>
       )}
-      {!item.href && <div className={componentClass}>{asideMenuItemInnerContents}</div>}
+      {!item.href && (
+        <div className={componentClass} onClick={() => setIsDropdownActive(!isDropdownActive)}>
+          {asideMenuItemInnerContents}
+        </div>
+      )}
       {item.menu && (
         <AsideMenuList
           menu={item.menu}
@@ -57,3 +93,5 @@ export default function AsideMenuItem({ item, isDropdownList = false }: Props  )
     </li>
   )
 }
+
+export default AsideMenuItem

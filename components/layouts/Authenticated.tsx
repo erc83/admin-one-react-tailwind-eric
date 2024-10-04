@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import { useState } from 'react'
 import { mdiForwardburger, mdiBackburger, mdiMenu } from '@mdi/js'
 import menuAside from '../../src/menuAside'
@@ -21,14 +21,20 @@ type Props = {
 export default function LayoutAuthenticated({ children }: Props ) {
   const dispatch = useAppDispatch();
   
-  dispatch(
-    setUser({
-      name: 'John Doe',
-      email: 'john@example.com',
-      avatar:
-        'https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93',
-    })
-  )
+  
+  useEffect(() => {
+      dispatch(
+        setUser({
+          name: 'John Doe',
+          email: 'john@example.com',
+          avatar:
+            'https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93',
+        })
+      )
+  })
+  
+
+
 
   const darkMode = useAppSelector((state) => state.style.darkMode)
 
@@ -42,11 +48,7 @@ export default function LayoutAuthenticated({ children }: Props ) {
       <GlobalStyle />
       <GlobalDarkMode />
 
-      <div 
-        className={`${darkMode ? 'dark' : ''} ${
-          isAsideMobileExpanded ? 'overflow-hidden lg:overflow-visible' : ''
-          }`}
-        >
+      <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
           <div 
             className={`${layoutAsidePadding} ${
               isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''
@@ -56,10 +58,16 @@ export default function LayoutAuthenticated({ children }: Props ) {
               menu={menuNavBar} 
               className={`${layoutAsidePadding} ${isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''}`}
             >
-              <NavBarItemPlain display="flex lg:hidden">
+              <NavBarItemPlain 
+                display="flex lg:hidden"
+                onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
+              >
                 <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
               </NavBarItemPlain>
-              <NavBarItemPlain display="hidden lg:flex xl:hidden">
+              <NavBarItemPlain 
+                display="hidden lg:flex xl:hidden"
+                onClick={() => setIsAsideLgActive}  
+              >
                 <BaseIcon path={mdiMenu} size="24" />
               </NavBarItemPlain>
             </NavBar>
@@ -67,6 +75,7 @@ export default function LayoutAuthenticated({ children }: Props ) {
               isAsideMobileExpanded={isAsideMobileExpanded}
               isAsideLgActive={isAsideLgActive}
               menu={menuAside}
+              onAsideLgClose={() => setIsAsideLgActive( false )}
             />
           {children}
           <FooterBar>
