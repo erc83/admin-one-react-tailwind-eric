@@ -26,7 +26,7 @@ export default function LayoutAuthenticated({ children }: Props ) {
       name: 'John Doe',
       email: 'john@example.com',
       avatar:
-        'https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93',
+        'https://res.cloudinary.com/dhavhzmvy/image/upload/v1728053925/template-next-tailwind/avatar_eric_q1rfvc.png',
     })
   )
 

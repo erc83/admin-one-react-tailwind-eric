@@ -5,6 +5,8 @@ import SectionTitleLineWithButton from "../components/SectionTitleLineWithButton
 import BaseButton from "../components/BaseButton";
 import LayoutAuthenticated from "../components/layouts/Authenticated";
 import NotificationBar from "../components/NotificationBar";
+import CardBox from "../components/CardBox";
+import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
 
 const TablesPage = () => {
     return (
@@ -24,6 +26,10 @@ const TablesPage = () => {
             <NotificationBar color="info" icon={mdiMonitorCellphone}>
                 <b>Responsive table.</b> Collapses on mobile
             </NotificationBar>
+
+            <CardBox>
+                <CardBoxComponentEmpty/> 
+            </CardBox>
 
         </SectionMain>
     )

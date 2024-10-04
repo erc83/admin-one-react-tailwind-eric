@@ -1,5 +1,3 @@
-
-
 ## agregar dependencias al utilizar typescript
 
 > yarn add @types/node @types/react-redux -D
@@ -11,3 +9,7 @@
 > yarn add react-chartjs-2
 
 
+## Create avatar
+```
+https://personas.draftbit.com/
+```
