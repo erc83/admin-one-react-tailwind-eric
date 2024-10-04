@@ -39,8 +39,19 @@ const ResponsivePage = () => {
                     />
                 </div>
             </SectionMain>
-
-
+            
+            <SectionTitle>Laptop & desktop</SectionTitle>
+            <SectionMain>
+                <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
+                    <Image 
+                        src="https://static.justboil.me/templates/one/one-tailwind-vue-widescreen.png" 
+                        width={1920} 
+                        height={960} 
+                        className="block" 
+                        alt="Image Laptop & Desktop"
+                    />
+                </div>
+            </SectionMain>
         </>
     )
 }
