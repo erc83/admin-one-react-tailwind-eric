@@ -7,7 +7,7 @@ import { ColorButtonKey } from '../interfaces'
 type Props = {
   label?: string
   icon?: string
-  iconSize?: string|number
+  iconSize?: string | number
   href?: string
   target?: string
   type?: string
@@ -19,6 +19,7 @@ type Props = {
   active?: boolean
   disabled?: boolean
   roundedFull?: boolean
+  isGrouped?: boolean
   onClick?: Function
 }
 
@@ -31,12 +32,14 @@ export default function BaseButton({
   type, 
   color = 'white', 
   asAnchor=false, 
-  className, 
+  className= '', 
   small=false, 
   outline=false, 
   active=false, 
   disabled=false, 
   roundedFull=false,
+  isGrouped = false,
+  onClick,
 }: Props ) {
   const componentClass = [
     'inline-flex',
@@ -66,6 +69,10 @@ export default function BaseButton({
     componentClass.push( outline ? 'opacity-50' : 'opacity-70')
   }
 
+  if (isGrouped) {
+    componentClass.push('mr-3 last:mr-0 mb-3')
+  }
+
   const componentClassString = componentClass.join(' ')
 
   const componentChildren = (
@@ -85,7 +92,7 @@ export default function BaseButton({
 
   return React.createElement(
     asAnchor ? 'a' : 'button',
-    { className: componentClassString, type: type ?? 'button', target, disabled },
+    { className: componentClassString, type: type ?? 'button', target, disabled, onClick },
     componentChildren
   )
 }

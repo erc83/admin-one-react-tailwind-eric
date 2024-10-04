@@ -25,6 +25,7 @@ import { sampleChartData } from '../components/charts/config'
 import CardBox from '../components/CardBox'
 import ChartLineSample from '../components/charts/ChartLineSample'
 import NotificationBar from '../components/NotificationBar'
+import TableSampleClients from '../components/TableSampleClients'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
@@ -124,6 +125,11 @@ const Dashboard = () => {
                     <b>Responsive table.</b> Collapses on mobile
                 </NotificationBar>
 
+                <CardBox hasTable>
+                    <TableSampleClients />
+                </CardBox>
+
+                
             </SectionMain>
         </>
     )
