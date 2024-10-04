@@ -26,6 +26,7 @@ import CardBox from '../components/CardBox'
 import ChartLineSample from '../components/charts/ChartLineSample'
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/TableSampleClients'
+import LayoutAuthenticated from '../components/layouts/Authenticated'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
@@ -134,5 +135,10 @@ const Dashboard = () => {
         </>
     )
 }
+
+Dashboard.getLayout = function getLayout(page: ReactElement) {
+    return <LayoutAuthenticated>{page}</LayoutAuthenticated>
+}
+
 
 export default Dashboard
