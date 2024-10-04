@@ -6,6 +6,8 @@
 
 > yarn add swr
 
+> yarn add chart.js
 
+> yarn add react-chartjs-2
 
 
