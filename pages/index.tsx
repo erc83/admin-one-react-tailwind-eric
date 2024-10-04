@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { ReactElement } from 'react'
 import CardBox from '../components/CardBox'
@@ -7,6 +8,7 @@ import { StyleKey } from '../interfaces'
 import { gradientBgPurplePink } from '../src/colors'
 import { useAppDispatch } from '../src/stores/hooks'
 import { setDarkMode, setStyle } from '../src/stores/styleSlice'
+import { appTitle } from '../src/config'
 
 const StyleSelect = () => {
   const dispatch = useAppDispatch()
@@ -27,6 +29,10 @@ const StyleSelect = () => {
   }
 
   return (
+  <>  
+    <Head>
+      <title>{appTitle}</title>
+    </Head>
     <div className={`flex min-h-screen items-center justify-center ${gradientBgPurplePink}`}>
       <SectionMain>
         <h1 className="text-4xl md:text-5xl text-center text-white font-bold mt-12 mb-3 lg:mt-0">
@@ -45,31 +51,16 @@ const StyleSelect = () => {
                   height="720"
                   onClick={(e) => handleStylePick(e, style)}
                   alt="" 
-                />
+                  />
               </div>
             </CardBox>
           ))}
         </div>
-
-
-
-
-        {/* <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
-          <BaseButton
-            href="https://github.com/justboil/admin-one-vue-tailwind"
-            target="_blank"
-            icon={mdiGithub}
-            label="Start on GitHub"
-            color="contrast"
-            roundedFull
-            small
-          />
-        </SectionTitleLineWithButton> */}
       </SectionMain>
     </div>
+    </>
   )
 }
-
 
 StyleSelect.getLayout = function getLayout(page: ReactElement ) {
   return <LayoutGuest>{page}</LayoutGuest>
