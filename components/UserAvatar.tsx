@@ -12,7 +12,6 @@ type Props = {
 
 export default function UserAvatar({ username, avatar=null, api='avataaars', className='', children }: Props) {
   const avatarImage = 
-    //avatar ?? `https://avatars.dicebear.com/api/${api}/${username.replace(/[^a-z0-9]+/i, '-')}.svg`
     avatar ?? `https://api.dicebear.com/9.x/${api}/svg?seed=${username.replace(/[^a-z0-9]+/i, '-')}.svg`
 
   return (

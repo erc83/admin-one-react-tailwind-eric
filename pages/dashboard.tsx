@@ -20,6 +20,7 @@ import CardBoxWidget from '../components/CardBoxWIdget'
 import { Transaction, Client } from '../interfaces'
 import CardBoxTransaction from '../components/CardBoxTransaction'
 import CardBoxClient from '../components/CardBoxClient'
+import SectionBannerStarOnGitHub from '../components/SectionBannerStarOnGitHub'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
@@ -92,6 +93,10 @@ const Dashboard = () => {
                             ))
                         }
                     </div>        
+                </div>
+
+                <div className="my-6">
+                    <SectionBannerStarOnGitHub  />
                 </div>
 
             </SectionMain>
