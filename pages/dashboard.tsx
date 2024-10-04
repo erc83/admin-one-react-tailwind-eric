@@ -21,12 +21,22 @@ import { Transaction, Client } from '../interfaces'
 import CardBoxTransaction from '../components/CardBoxTransaction'
 import CardBoxClient from '../components/CardBoxClient'
 import SectionBannerStarOnGitHub from '../components/SectionBannerStarOnGitHub'
+import { sampleChartData } from '../components/charts/config'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
     const { transactions } = useSampleTransactions()
 
     const clientsListed = clients.slice(0, 4)
+
+    const [charData, setChartData] = useState(sampleChartData())
+
+    const fillChartData = (e: React.MouseEvent) => {
+        e.preventDefault()
+
+        setChartData(sampleChartData())
+    }
+
 
     return (
         <>
@@ -98,6 +108,10 @@ const Dashboard = () => {
                 <div className="my-6">
                     <SectionBannerStarOnGitHub  />
                 </div>
+
+                <SectionTitleLineWithButton icon={mdiChartPie} title="Trends overviews">
+                    <BaseButton icon={mdiReload} color="whiteDark" onClick={fillChartData} />
+                </SectionTitleLineWithButton>
 
             </SectionMain>
         </>

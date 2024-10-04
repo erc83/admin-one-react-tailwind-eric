@@ -5,20 +5,21 @@ import BaseIcon from './BaseIcon'
 import { ColorButtonKey } from '../interfaces'
 
 type Props = {
-  label?: string,
-  icon?: string,
-  iconSize?: string|number,
-  href?: string,
-  target?: string,
-  type?: string,
-  color?: ColorButtonKey,
-  className?: string,
-  asAnchor?: boolean,
-  small?: boolean,
-  outline?: boolean,
-  active?: boolean,
-  disabled?: boolean,
+  label?: string
+  icon?: string
+  iconSize?: string|number
+  href?: string
+  target?: string
+  type?: string
+  color?: ColorButtonKey
+  className?: string
+  asAnchor?: boolean
+  small?: boolean
+  outline?: boolean
+  active?: boolean
+  disabled?: boolean
   roundedFull?: boolean
+  onClick?: Function
 }
 
 export default function BaseButton({
