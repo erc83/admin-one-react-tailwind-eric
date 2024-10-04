@@ -24,6 +24,7 @@ import SectionBannerStarOnGitHub from '../components/SectionBannerStarOnGitHub'
 import { sampleChartData } from '../components/charts/config'
 import CardBox from '../components/CardBox'
 import ChartLineSample from '../components/charts/ChartLineSample'
+import NotificationBar from '../components/NotificationBar'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
@@ -116,6 +117,12 @@ const Dashboard = () => {
                 </SectionTitleLineWithButton>
 
                 <CardBox className="mb-6">{chartData && <ChartLineSample data={chartData}  />} </CardBox>
+                
+                <SectionTitleLineWithButton icon={mdiAccountMultiple} title="Clients" />
+
+                <NotificationBar color='info' icon={mdiMonitorCellphone}>
+                    <b>Responsive table.</b> Collapses on mobile
+                </NotificationBar>
 
             </SectionMain>
         </>
