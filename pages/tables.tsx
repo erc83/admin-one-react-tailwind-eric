@@ -1,14 +1,15 @@
-import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from "@mdi/js";
-import React, { ReactElement } from "react";
+import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
+import React, { ReactElement } from 'react'
 import Head from 'next/head'
-import SectionMain from "../components/SectionMain";
-import SectionTitleLineWithButton from "../components/SectionTitleLineWithButton";
-import BaseButton from "../components/BaseButton";
-import LayoutAuthenticated from "../components/layouts/Authenticated";
-import NotificationBar from "../components/NotificationBar";
-import CardBox from "../components/CardBox";
+import SectionMain from '../components/SectionMain'
+import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
+import BaseButton from '../components/BaseButton'
+import LayoutAuthenticated from '../components/layouts/Authenticated'
+import NotificationBar from '../components/NotificationBar'
+import CardBox from '../components/CardBox'
 import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
-import { appTitle } from "../src/config";
+import { appTitle } from '../src/config'
+import TableSampleClients from '../components/TableSampleClients'
 
 const TablesPage = () => {
     return (
@@ -26,15 +27,25 @@ const TablesPage = () => {
                         color="contrast"
                         roundedFull
                         small
-                        />
+                    />
                 </SectionTitleLineWithButton>
 
                 <NotificationBar color="info" icon={mdiMonitorCellphone}>
                     <b>Responsive table.</b> Collapses on mobile
                 </NotificationBar>
 
+                <CardBox className="mb-6" has-table>
+                    <TableSampleClients />
+                </CardBox>
+
+                <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />    
+                <NotificationBar color='danger' icon={mdiTableOff}>
+                    <b>Empty card.</b> When there&apos;s nothing to show
+                </NotificationBar>
+
+
                 <CardBox>
-                    <CardBoxComponentEmpty/> 
+                    <CardBoxComponentEmpty /> 
                 </CardBox>
 
             </SectionMain>
