@@ -18,6 +18,8 @@ import BaseButton from '../components/BaseButton'
 import BaseButtons from '../components/BaseButtons'
 import SectionMain from '../components/SectionMain'
 import NotificationBar from '../components/NotificationBar'
+import CardBox from '../components/CardBox'
+import { setDarkMode } from '../src/stores/styleSlice'
 
 const UiPage = () => {
     
@@ -40,6 +42,21 @@ const UiPage = () => {
             </Head>
 
             <SectionTitle first>Dark mode</SectionTitle>
+
+            <SectionMain>
+                <CardBox className="md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl md:mx-auto">
+                    <div className="text-center py-24 lg:py-12 text-gray-500 dark:text-slate-400">
+                        <BaseButton 
+                            label="toggle"
+                            color="contrast"
+                            onClick={() => dispatch(setDarkMode(null))}
+                        />
+                    </div>
+                </CardBox>
+            </SectionMain>
+
+
+
         
             <SectionMain>
                 <NotificationBar color="info" icon={mdiInformation} button={NotificationSampleButton}>
