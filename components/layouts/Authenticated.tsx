@@ -9,8 +9,8 @@ import NavBarItemPlain from '../NavBarItemPlain'
 import AsideMenu from '../AsideMenu'
 import FooterBar from '../FooterBar'
 import { setUser } from '../../src/stores/mainSlice'
-import GlobalStyle from '../globals/Style'
-import GlobalDarkMode from '../globals/DarkMode'
+/* import GlobalStyle from '../globals/Style'
+import GlobalDarkMode from '../globals/DarkMode' */
 import { useAppDispatch, useAppSelector } from '../../src/stores/hooks'
 
 type Props = {
@@ -45,8 +45,8 @@ export default function LayoutAuthenticated({ children }: Props ) {
 
   return (
     <>
-      <GlobalStyle />
-      <GlobalDarkMode />
+      {/* <GlobalStyle />
+      <GlobalDarkMode /> */}
 
       <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
           <div 

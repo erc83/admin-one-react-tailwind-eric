@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { useAppSelector } from '../../src/stores/hooks'
-import GlobalDarkMode from '../globals/DarkMode'
-import GlobalStyle from '../globals/Style'
+/* import GlobalDarkMode from '../globals/DarkMode'
+import GlobalStyle from '../globals/Style' */
 
 type Props = {
   children: ReactNode,
@@ -12,8 +12,8 @@ export default function LayoutGuest({ children }: Props) {
 
   return (
     <>
-      <GlobalStyle />
-      <GlobalDarkMode />
+      {/* <GlobalStyle />
+      <GlobalDarkMode /> */}
 
       <div className={darkMode ? 'dark' : ''}>
         <div className="bg-gray-50 dark:bg-slate-800 dark:text-slate-100">{children}</div>
