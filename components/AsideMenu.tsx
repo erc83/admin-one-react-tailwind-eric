@@ -7,7 +7,7 @@ type Props = {
   menu: MenuAsideItem[]
   isAsideMobileExpanded: boolean
   isAsideLgActive: boolean
-  onAsideLgClose: Function
+  onAsideLgClose: () => void
 }
 
 

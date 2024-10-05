@@ -13,3 +13,10 @@
 ```
 https://personas.draftbit.com/
 ```
+
+
+> yarn add @typescript-eslint/eslint-plugin -D
+
+> yarn add @typescript-eslint/parser -D
+
+> yarn add eslint -D

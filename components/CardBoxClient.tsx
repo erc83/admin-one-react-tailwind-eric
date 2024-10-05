@@ -1,17 +1,14 @@
 import { mdiTrendingDown, mdiTrendingNeutral, mdiTrendingUp } from '@mdi/js'
 import React from 'react'
-import { Client, ColorKey } from '../interfaces'
+import { Client } from '../interfaces'
 import CardBox from './CardBox'
 import BaseLevel from './BaseLevel'
 import PillTag from './PillTag'
 import UserAvatar from './UserAvatar'
 
-
 type Props = {
     client: Client
 }
-
-
 
 const CarBoxClient = (props: Props) => {
     const pillColor = () => {

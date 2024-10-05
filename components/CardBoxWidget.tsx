@@ -6,6 +6,7 @@ import CardBox from './CardBox'
 import BaseLevel from './BaseLevel'
 import PillTagTrend from './PillTagTrend'
 import BaseIcon from './BaseIcon'
+import BaseButton from './BaseButton'
 
 type Props = {
     number: number
@@ -31,6 +32,7 @@ const CardBoxWidget = ( props: Props ) => {
                             color={props.trendColor}
                             small
                         />
+                        <BaseButton icon={mdiCog} color="lightDark" small />
                     </BaseLevel>
                 )
             }
