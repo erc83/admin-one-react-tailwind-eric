@@ -9,7 +9,11 @@ export default function GlobalDarkMode() {
   const isSetInMedia = 
     typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches
 
-  dispatch(setDarkMode(isSetInLocalStorage ? localStorage[darkModeKey] === "1" : isSetInMedia));
+  dispatch(
+    setDarkMode(
+        isSetInLocalStorage ? localStorage[darkModeKey] === "1" : isSetInMedia
+    )
+  )
   
   return null;
 }

@@ -1,8 +1,8 @@
-import Head from "next/head"
-import { ReactElement } from "react"
-import LayoutAuthenticated from "../components/layouts/Authenticated"
-import SectionTitle from "../components/SectionTitle"
-import { appTitle } from "../src/config"
+import Head from 'next/head'
+import { ReactElement } from 'react'
+import LayoutAuthenticated from '../components/layouts/Authenticated'
+import SectionTitle from '../components/SectionTitle'
+import { appTitle } from '../src/config'
 
 const ProfilePage = () => {
     return (
@@ -11,7 +11,7 @@ const ProfilePage = () => {
                 <title>Profile - {appTitle}</title>
             </Head>
             <div className="min-h-screen">
-                <SectionTitle first>Demo is coming soon</SectionTitle>
+                <SectionTitle first>Demo is coming soon Profile</SectionTitle>
             </div>
         </>
     )

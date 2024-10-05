@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import React, { ReactElement } from 'react'
 import CardBox from '../components/CardBox'
 import LayoutGuest from '../components/layouts/Guest'
@@ -46,11 +47,11 @@ const StyleSelect = () => {
           {styles.map((style) => (
             <CardBox key={style} className="cursor-pointer bg-gray-50" isHoverable>
               <div>
-                <img src={`https://static.justboil.me/templates/one/small/${style}-v3.png`} 
-                  width="1280"
-                  height="720"
+                <Image src={`https://static.justboil.me/templates/one/small/${style}-v3.png`} 
+                  width={1280}
+                  height={720}
                   onClick={(e) => handleStylePick(e, style)}
-                  alt="" 
+                  alt={style} 
                   />
               </div>
             </CardBox>

@@ -22,7 +22,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt= "Image Mobile & Table"
+                        alt= {`Image Mobile & Table - ${appTitle}`}
                     />
                 </div>
             </SectionMain>
@@ -35,7 +35,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt="Image Small laptop 1024px"
+                        alt={`Image Small laptop 1024px - ${appTitle}`}
                     />
                 </div>
             </SectionMain>
@@ -48,7 +48,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt="Image Laptop & Desktop"
+                        alt={`Image Laptop & Desktop - ${appTitle}`}
                     />
                 </div>
             </SectionMain>
