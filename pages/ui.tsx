@@ -22,6 +22,7 @@ import CardBox from '../components/CardBox'
 import { setDarkMode } from '../src/stores/styleSlice'
 import BaseDivider from '../components/BaseDivider'
 import PillTag from '../components/PillTag'
+import CardBoxComponentTitle from '../components/CardBoxComponentTitle'
 
 const UiPage = () => {
     
@@ -126,6 +127,23 @@ const UiPage = () => {
                         <PillTag  color="warning" label="Warning" icon={mdiTrendingUp} />
                         <PillTag  color="danger" label="Danger" icon={mdiTrendingUp} />
                     </CardBox>
+                </SectionMain>
+
+                <SectionTitle>Cards</SectionTitle>
+
+                <SectionMain>
+                    <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-2">
+                        <CardBox footer={CardSamplesFooter}>
+                            
+                            <CardBoxComponentTitle title="With title & icon">
+                                <BaseButton icon={mdiReload} color="whiteDark" roundedFull  />
+                            </CardBoxComponentTitle>
+                            
+                            <div className="space-y-3">
+                                <p>Card with title, icon & footer</p>
+                            </div>
+                        </CardBox>
+                    </div>
                 </SectionMain>
 
             </SectionMain>
