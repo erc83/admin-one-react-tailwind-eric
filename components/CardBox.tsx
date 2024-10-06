@@ -8,7 +8,6 @@ type Props = {
   className?: string
   hasComponentLayout?: boolean
   hasTable?: boolean
-  isForm?: boolean
   isHoverable?: boolean
   isModal?: boolean
   children: ReactNode
@@ -23,7 +22,6 @@ export default function CardBox({
   className='', 
   hasComponentLayout=false, 
   hasTable=false, 
-  isForm=false, 
   isHoverable=false, 
   isModal=false, 
   children, 
@@ -43,7 +41,7 @@ export default function CardBox({
   }
 
   return React.createElement(
-    isForm ? 'form' : 'div',
+    'div',
     { className: componentClass.join(' '), onClick },
     hasComponentLayout ? (
       children
