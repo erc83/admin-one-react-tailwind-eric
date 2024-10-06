@@ -25,6 +25,9 @@ import PillTag from '../components/PillTag'
 import CardBoxComponentTitle from '../components/CardBoxComponentTitle'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
+import { Field, Formik } from 'formik'
+import FormCheckRadio from '../components/FormCheckRadio'
+import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
 
 const UiPage = () => {
     
@@ -60,28 +63,57 @@ const UiPage = () => {
                 </CardBox>
             </SectionMain>
 
-            <SectionTitle first>Notifications</SectionTitle>
-            <SectionMain>
-                <NotificationBar color="info" icon={mdiInformation} button={NotificationSampleButton}>
-                    <b>Info State</b>. NotificationBar
-                </NotificationBar>
+            <Formik initialValues={{ outline: false}} onSubmit={() => null}>
+                {
+                    ({ values }) => (
+                        <>
+                            <SectionTitle custom>
+                                <h1 className="text-2xl text-gray-500 dark:text-slate-400">Notifications</h1>
+                                <div className="flex items-center justify-center mt-6">
+                                    <FormCheckRadio type="switch" label="Outline">
+                                        <Field type="checkbox" name="outline"/>
+                                    </FormCheckRadio>
+                                </div>
+                            </SectionTitle>
+                            <SectionMain>
+                                <NotificationBar color="info" icon={mdiInformation} 
+                                    button={
+                                        <BaseButton 
+                                            color={values.outline ? 'info' : 'white'}
+                                            label="Button"
+                                            roundedFull
+                                            small
+                                            outline={values.outline}
+                                        />
+                                    }
+                                    outline={values.outline}
+                                >
+                                    <b>Info State</b>. NotificationBar
+                                </NotificationBar>
 
-                <NotificationBar color="success" icon={mdiCheckCircle} button={NotificationSampleButton}>
-                    <b>Success State</b>. NotificationBar
-                </NotificationBar>
+                                <NotificationBar color="success" icon={mdiCheckCircle} button={NotificationSampleButton}>
+                                    <b>Success State</b>. NotificationBar
+                                </NotificationBar>
 
-                <NotificationBar color="warning" icon={mdiAlert} button={NotificationSampleButton} >
-                    <b>Warning State</b>. NotificationBar
-                </NotificationBar>
+                                <NotificationBar color="warning" icon={mdiAlert} button={NotificationSampleButton} >
+                                    <b>Warning State</b>. NotificationBar
+                                </NotificationBar>
+                                
+                                <NotificationBar color="danger" icon={mdiAlertCircle} button={NotificationSampleButton} >
+                                    <b>Danger State</b>. NotificationBar
+                                </NotificationBar>
+                                
+                                <NotificationBar color="contrast" icon={mdiContrastCircle} >
+                                    <b>Contrast</b>. NotificationBar
+                                </NotificationBar>
+                            </SectionMain>
+                        </>
+                    )
+                }
+
+
                 
-                <NotificationBar color="danger" icon={mdiAlertCircle} button={NotificationSampleButton} >
-                    <b>Danger State</b>. NotificationBar
-                </NotificationBar>
-                
-                <NotificationBar color="contrast" icon={mdiContrastCircle} >
-                    <b>Contrast</b>. NotificationBar
-                </NotificationBar>
-            </SectionMain>
+            </Formik>
 
                 <SectionTitle>Buttons</SectionTitle>
                 <SectionMain>
