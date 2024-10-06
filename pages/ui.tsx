@@ -37,8 +37,8 @@ const UiPage = () => {
 
     const CardSamplesFooter = (
         <BaseButtons>
-            <BaseButton label="Confirm" color="info" isGrouped />
-            <BaseButton label="Cancel" color="info" isGrouped outline/>
+            <BaseButton label="Confirm" color="info" />
+            <BaseButton label="Cancel" color="info" outline/>
         </BaseButtons>
     )
 
@@ -182,42 +182,36 @@ const UiPage = () => {
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="contrast" label="Button" 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="info" label="Button" 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="success" label="Button" 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="warning" label="Button" 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="danger" label="Button" 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                         </BaseButtons>
 
@@ -229,42 +223,36 @@ const UiPage = () => {
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="contrast" label="Button" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="info" label="Button" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="success" label="Button" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="warning" label="Button" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="danger" label="Button" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                         </BaseButtons>
 
@@ -276,42 +264,36 @@ const UiPage = () => {
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="contrast" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="info" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="success" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="warning" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                             <BaseButton color="danger" icon={mdiOpenInNew} 
                                                 outline={values.outline}
                                                 small={values.small}
                                                 roundedFull={values.rounded}
                                                 disabled={values.disabled}
-                                                isGrouped
                                             />
                                         </BaseButtons>
                                     </>
@@ -350,32 +332,27 @@ const UiPage = () => {
                                             <PillTag  color="contrast" label="Contrast" 
                                                 icon={values.icon ? mdiTrendingUp : null}
                                                 outline={values.outline}
-                                                small={values.small}
-                                                isGrouped 
+                                                small={values.small} 
                                             />
                                             <PillTag  color="info" label="Info" 
                                                 icon={values.icon ? mdiTrendingUp : null}
                                                 outline={values.outline}
-                                                small={values.small}
-                                                isGrouped 
+                                                small={values.small} 
                                             />
                                             <PillTag  color="success" label="Success" 
                                                 icon={values.icon ? mdiTrendingUp : null}
                                                 outline={values.outline}
                                                 small={values.small}
-                                                isGrouped
                                             />
                                             <PillTag  color="warning" label="Warning" 
                                                 icon={values.icon ? mdiTrendingUp : null}
                                                 outline={values.outline}
                                                 small={values.small}
-                                                isGrouped
                                             />
                                             <PillTag  color="danger" label="Danger" 
                                                 icon={values.icon ? mdiTrendingUp : null}
                                                 outline={values.outline}
                                                 small={values.small}
-                                                isGrouped
                                             />
                                         </BaseButtons>
                                     </>
