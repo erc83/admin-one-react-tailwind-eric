@@ -12,6 +12,8 @@ import { Formik, Form, Field } from 'formik'
 import FormField from '../components/FormField'
 import BaseButtons from '../components/BaseButtons'
 import BaseDivider from '../components/BaseDivider'
+import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
+import FormCheckRadio from '../components/FormCheckRadio'
 
 const FormsPage = () => {
     return (
@@ -85,6 +87,66 @@ const FormsPage = () => {
 
             </SectionMain>
 
+            <SectionTitle>Custom elements</SectionTitle>
+            <SectionMain>
+                <CardBox>
+                    <Formik
+                        initialValues={{ checkboxes: ['lorem'], switches: ['lorem'], radio: 'lorem', outline: false, outline1:false, outline2: false }}
+                        onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
+                    >
+                        <Form>
+                            <FormField label="Checkbox">
+                                <FormCheckRadioGroup>
+                                    <FormCheckRadio type="checkbox" label="Lorem">
+                                        <Field type="checkbox" name="checkboxes" value="lorem" />
+                                    </FormCheckRadio>
+                                    <FormCheckRadio type="checkbox" label="Ipsum">
+                                        <Field type="checkbox" name="checkboxes" value="ipsum" />
+                                    </FormCheckRadio>
+                                    <FormCheckRadio type="checkbox" label="Dolore">
+                                        <Field type="checkbox" name="checkboxes" value="dolore" />
+                                    </FormCheckRadio>
+                                </FormCheckRadioGroup>
+                            </FormField>
+
+                            <BaseDivider />
+                            <FormField label="Radio">
+                                <FormCheckRadioGroup>
+                                    <FormCheckRadio type="radio" label="Lorem">
+                                        <Field type="checkbox" name="radio" value="lorem" />
+                                    </FormCheckRadio>
+                                    <FormCheckRadio type="radio" label="Ipsum">
+                                        <Field type="checkbox" name="checkboxes" value="ipsum" />
+                                    </FormCheckRadio>
+                                </FormCheckRadioGroup>
+                            </FormField>
+
+                            <BaseDivider />
+
+                            <FormField label="Switch">
+                                <FormCheckRadioGroup>
+                                    <FormCheckRadio type="switch" label="Lorem">
+                                        <Field type="checkbox" name="outline" values="lorem" />
+                                    </FormCheckRadio>
+                                    <FormCheckRadio type="switch" label="Ipsum">
+                                        <Field type="checkbox" name="outline1" values="ipsum" />
+                                    </FormCheckRadio>
+                                    <FormCheckRadio type="switch" label="switch1">
+                                        <Field type="checkbox" name="outline2" values="doloressss" />
+                                    </FormCheckRadio>
+                                </FormCheckRadioGroup>
+                            </FormField>   
+                            <BaseDivider />
+
+                            <BaseButtons>
+                                <BaseButton type="submit" color="info" label="Submit"/>
+                                <BaseButton type="reset" color="info"  outline label="Reset"/>
+                            </BaseButtons>
+
+                        </Form>
+                    </Formik>
+                </CardBox>
+            </SectionMain>
         </>
     )
 }
