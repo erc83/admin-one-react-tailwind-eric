@@ -21,6 +21,7 @@ import NotificationBar from '../components/NotificationBar'
 import CardBox from '../components/CardBox'
 import { setDarkMode } from '../src/stores/styleSlice'
 import BaseDivider from '../components/BaseDivider'
+import PillTag from '../components/PillTag'
 
 const UiPage = () => {
     
@@ -115,8 +116,17 @@ const UiPage = () => {
                     </CardBox>
                 </SectionMain>
 
+                <SectionTitle>Pills</SectionTitle>
 
-
+                <SectionMain>
+                    <CardBox>
+                        <PillTag  color="contrast" label="Contrast" icon={mdiTrendingUp} />
+                        <PillTag  color="info" label="Info" icon={mdiTrendingUp} />
+                        <PillTag  color="success" label="Success" icon={mdiTrendingUp} />
+                        <PillTag  color="warning" label="Warning" icon={mdiTrendingUp} />
+                        <PillTag  color="danger" label="Danger" icon={mdiTrendingUp} />
+                    </CardBox>
+                </SectionMain>
 
             </SectionMain>
         </>
