@@ -142,6 +142,8 @@ const UiPage = () => {
                             <div className="space-y-3">
                                 <p>Card with title, icon & footer</p>
                             </div>
+
+                            <CardBox footer={CardSamplesFooter}>Just body & Footer </CardBox>
                         </CardBox>
                     </div>
                 </SectionMain>
