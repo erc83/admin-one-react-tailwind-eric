@@ -17,11 +17,11 @@ const BaseButtons = ({
 }: Props) => {
     return (
         <div className={`flex items-center ${type} ${mb} ${noWrap ? 'flex-nowrap' : 'flex-wrap'}`}>
-            {children}
-            {/* {Children.map(children, (child: ReactElement) => {
-                    return cloneElement(child, {className: classAddon})
+            {/* {children} */}
+            {Children.map(children, (child: ReactElement) => {
+                    return cloneElement(child, {className: `${classAddon} ${child.props.className}` })
                 }
-            )} */}
+            )}
         </div>
     )
 }
