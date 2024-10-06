@@ -325,13 +325,66 @@ const UiPage = () => {
 
                 <SectionMain>
                     <CardBox>
-                        <PillTag  color="contrast" label="Contrast" icon={mdiTrendingUp} />
-                        <PillTag  color="info" label="Info" icon={mdiTrendingUp} />
-                        <PillTag  color="success" label="Success" icon={mdiTrendingUp} />
-                        <PillTag  color="warning" label="Warning" icon={mdiTrendingUp} />
-                        <PillTag  color="danger" label="Danger" icon={mdiTrendingUp} />
+                        <Formik
+                            initialValues={{ outline: false, small: false, icon: true}}
+                            onSubmit={() => null}
+                        >
+                            {
+                                ({ values }) => (
+                                    <>
+                                        <FormCheckRadioGroup>
+                                            <FormCheckRadio type="switch" label="Outline" isGrouped>
+                                                <Field type="checkbox" name="outline" />
+                                            </FormCheckRadio>
+                                            <FormCheckRadio type="switch" label="Small" isGrouped>
+                                                <Field type="checkbox" name="small" />
+                                            </FormCheckRadio>
+                                            <FormCheckRadio type="switch" label="Icon" isGrouped>
+                                                <Field type="checkbox" name="icon" />
+                                            </FormCheckRadio>
+                                        </FormCheckRadioGroup>
+
+                                        <BaseDivider/>
+
+                                        <BaseButtons>
+                                            <PillTag  color="contrast" label="Contrast" 
+                                                icon={values.icon ? mdiTrendingUp : null}
+                                                outline={values.outline}
+                                                small={values.small}
+                                                isGrouped 
+                                            />
+                                            <PillTag  color="info" label="Info" 
+                                                icon={values.icon ? mdiTrendingUp : null}
+                                                outline={values.outline}
+                                                small={values.small}
+                                                isGrouped 
+                                            />
+                                            <PillTag  color="success" label="Success" 
+                                                icon={values.icon ? mdiTrendingUp : null}
+                                                outline={values.outline}
+                                                small={values.small}
+                                                isGrouped
+                                            />
+                                            <PillTag  color="warning" label="Warning" 
+                                                icon={values.icon ? mdiTrendingUp : null}
+                                                outline={values.outline}
+                                                small={values.small}
+                                                isGrouped
+                                            />
+                                            <PillTag  color="danger" label="Danger" 
+                                                icon={values.icon ? mdiTrendingUp : null}
+                                                outline={values.outline}
+                                                small={values.small}
+                                                isGrouped
+                                            />
+                                        </BaseButtons>
+                                    </>
+                                )
+                            }
+                        </Formik>
                     </CardBox>
                 </SectionMain>
+
 
                 <SectionTitle>Cards</SectionTitle>
 
