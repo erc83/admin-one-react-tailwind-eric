@@ -79,3 +79,5 @@ const FormField = ({ icons = [], ...props }: Props) => {
         </div>
     )
 }
+
+export default FormField
