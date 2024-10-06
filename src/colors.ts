@@ -1,3 +1,5 @@
+import type { ColorButtonKey } from "../interfaces"
+
 export const gradientBgBase = 'bg-gradient-to-tr'
 export const gradientBgPurplePink = `${gradientBgBase} from-purple-400 via-pink-500 to-red-500`
 export const gradientBgDark = `${gradientBgBase} from-slate-700 via-slate-900 to-slate-800`
@@ -33,7 +35,18 @@ export const colorsOutline = {
   info: [colorsText.info, 'border-blue-500'].join(' '),
 }
 
-export const getButtonColor = ( color, isOutlined, hasHover, isActive = false ) => {
+export const getButtonColor = ( 
+  color: ColorButtonKey, 
+  isOutlined: boolean, 
+  hasHover: boolean, 
+  isActive= false 
+) => {  
+  
+  if(color === 'void') {
+    return ''
+  }
+  
+
   const colors = {
     ring: {
       white: 'ring-gray-200 dark:ring-gray-500',
@@ -108,12 +121,7 @@ export const getButtonColor = ( color, isOutlined, hasHover, isActive = false ) 
     },
   }
 
-  if (!colors.bg[color]) {
-    return color
-  }
-
-  const isOutlinedProcessed =
-    isOutlined && ['white', 'whiteDark', 'lightDark'].indexOf(color) < 0
+  const isOutlinedProcessed = isOutlined && ['white', 'whiteDark', 'lightDark'].indexOf(color) < 0
 
   const base = [colors.borders[color], colors.ring[color]]
 
