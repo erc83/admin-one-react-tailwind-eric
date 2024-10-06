@@ -151,37 +151,173 @@ const UiPage = () => {
                 <SectionTitle>Buttons</SectionTitle>
                 <SectionMain>
                     <CardBox>
-                        <BaseButtons>
-                            <BaseButton color="lightDark" label="Button" isGrouped/>
-                            <BaseButton color="contrast" label="Button" isGrouped/>
-                            <BaseButton color="info" label="Button" isGrouped/>
-                            <BaseButton color="success" label="Button" isGrouped/>
-                            <BaseButton color="warning" label="Button" isGrouped/>
-                            <BaseButton color="danger" label="Button" isGrouped/>
-                        </BaseButtons>
+                        <Formik 
+                            initialValues={{ outline: false, small: false, rounded: false, disabled: false}}
+                            onSubmit={() => null}
+                        >
+                            {
+                                (({ values }) => (
+                                    <>
 
-                        <BaseDivider />
+                                        <FormCheckRadioGroup>
+                                            <FormCheckRadio type="switch" label="Outline" isGrouped>
+                                                <Field type="checkbox" name="outline" />
+                                            </FormCheckRadio>
+                                            <FormCheckRadio type="switch" label="Small" isGrouped>
+                                                <Field type="checkbox" name="small" />
+                                            </FormCheckRadio>
+                                            <FormCheckRadio type="switch" label="Rounded" isGrouped>
+                                                <Field type="checkbox" name="rounded" />
+                                            </FormCheckRadio>
+                                            <FormCheckRadio type="switch" label="Disabled" isGrouped>
+                                                <Field type="checkbox" name="disabled" />
+                                            </FormCheckRadio>
+                                        </FormCheckRadioGroup>
 
-                        <BaseButtons>
-                            <BaseButton color="lightDark" label="Button" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="contrast" label="Button" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="info" label="Button" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="success" label="Button" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="warning" label="Button" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="danger" label="Button" icon={mdiOpenInNew} isGrouped/>
-                        </BaseButtons>
+                                        <BaseDivider />
 
-                        <BaseDivider />
+                                        <BaseButtons>
+                                            <BaseButton color="lightDark" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="contrast" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="info" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="success" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="warning" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="danger" label="Button" 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                        </BaseButtons>
 
-                        <BaseButtons>
-                            <BaseButton color="lightDark" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="contrast" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="info" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="success" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="warning" icon={mdiOpenInNew} isGrouped/>
-                            <BaseButton color="danger" icon={mdiOpenInNew} isGrouped/>
-                        </BaseButtons>
+                                        <BaseDivider />
 
+                                        <BaseButtons>
+                                            <BaseButton color="lightDark" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="contrast" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="info" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="success" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="warning" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="danger" label="Button" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                        </BaseButtons>
+
+                                        <BaseDivider />
+
+                                        <BaseButtons>
+                                            <BaseButton color="lightDark" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="contrast" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="info" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="success" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="warning" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                            <BaseButton color="danger" icon={mdiOpenInNew} 
+                                                outline={values.outline}
+                                                small={values.small}
+                                                roundedFull={values.rounded}
+                                                disabled={values.disabled}
+                                                isGrouped
+                                            />
+                                        </BaseButtons>
+                                    </>
+                                ))
+                            }
+                        </Formik>
                     </CardBox>
                 </SectionMain>
 
