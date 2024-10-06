@@ -23,6 +23,8 @@ import { setDarkMode } from '../src/stores/styleSlice'
 import BaseDivider from '../components/BaseDivider'
 import PillTag from '../components/PillTag'
 import CardBoxComponentTitle from '../components/CardBoxComponentTitle'
+import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
+import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
 
 const UiPage = () => {
     
@@ -79,6 +81,7 @@ const UiPage = () => {
                 <NotificationBar color="contrast" icon={mdiContrastCircle} >
                     <b>Contrast</b>. NotificationBar
                 </NotificationBar>
+            </SectionMain>
 
                 <SectionTitle>Buttons</SectionTitle>
                 <SectionMain>
@@ -148,7 +151,12 @@ const UiPage = () => {
                     </div>
                 </SectionMain>
 
-            </SectionMain>
+                <SectionTitleLineWithButton icon={mdiAlertCircle} title="Empty variation" />
+                <SectionMain>
+                    <CardBox>
+                        <CardBoxComponentEmpty />
+                    </CardBox>
+                </SectionMain>
         </>
     )
 }
