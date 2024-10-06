@@ -91,19 +91,52 @@ const UiPage = () => {
                                     <b>Info State</b>. NotificationBar
                                 </NotificationBar>
 
-                                <NotificationBar color="success" icon={mdiCheckCircle} button={NotificationSampleButton}>
+                                <NotificationBar color="success" icon={mdiCheckCircle} 
+                                    button={
+                                        <BaseButton 
+                                            color={values.outline ? 'success' : 'white'}
+                                            label="Button"
+                                            roundedFull
+                                            small
+                                            outline={values.outline}
+                                        />
+                                    }
+                                    outline={values.outline}
+                                >
                                     <b>Success State</b>. NotificationBar
                                 </NotificationBar>
 
-                                <NotificationBar color="warning" icon={mdiAlert} button={NotificationSampleButton} >
+                                <NotificationBar color="warning" icon={mdiAlert} 
+                                    button={
+                                        <BaseButton
+                                            color={values.outline ? 'warning' : 'white'}
+                                            label="Button"
+                                            roundedFull
+                                            small
+                                            outline={values.outline}
+                                        />
+                                    } 
+                                    outline={values.outline}
+                                >
                                     <b>Warning State</b>. NotificationBar
                                 </NotificationBar>
                                 
-                                <NotificationBar color="danger" icon={mdiAlertCircle} button={NotificationSampleButton} >
+                                <NotificationBar color="danger" icon={mdiAlertCircle} 
+                                    button={
+                                        <BaseButton
+                                            color={values.outline ? 'danger' : 'white'}
+                                            label="Button"
+                                            roundedFull
+                                            small
+                                            outline={values.outline}
+                                        />
+                                    } 
+                                    outline={values.outline}
+                                >
                                     <b>Danger State</b>. NotificationBar
                                 </NotificationBar>
                                 
-                                <NotificationBar color="contrast" icon={mdiContrastCircle} >
+                                <NotificationBar color="contrast" icon={mdiContrastCircle} outline={values.outline}>
                                     <b>Contrast</b>. NotificationBar
                                 </NotificationBar>
                             </SectionMain>
