@@ -20,3 +20,9 @@ https://personas.draftbit.com/
 > yarn add @typescript-eslint/parser -D
 
 > yarn add eslint -D
+
+
+
+> yarn add formik
+
+

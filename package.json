@@ -12,6 +12,7 @@
     "@mdi/js": "^7.0.96",
     "@reduxjs/toolkit": "^1.8.5",
     "chart.js": "^4.4.4",
+    "formik": "^2.4.6",
     "next": "latest",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
