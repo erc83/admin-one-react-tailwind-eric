@@ -2,7 +2,6 @@ import { mdiTrendingDown, mdiTrendingNeutral, mdiTrendingUp } from '@mdi/js'
 import React from 'react'
 import { Client } from '../interfaces'
 import CardBox from './CardBox'
-import BaseLevel from './BaseLevel'
 import PillTag from './PillTag'
 import UserAvatar from './UserAvatar'
 
@@ -30,8 +29,8 @@ const CarBoxClient = (props: Props) => {
 
     return (
         <CardBox className="mb-6 last:mt-0">
-            <BaseLevel>
-                <BaseLevel type="justify-start">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-start mb-6 md:mb-0">
                     <UserAvatar className="w-12 h-12 mr-6" username={props.client.name} />
                     <div className="text-center md:text-left overflow-hidden">
                         <h4 className="text-xl text-ellipsis">{props.client.name}</h4>
@@ -39,10 +38,10 @@ const CarBoxClient = (props: Props) => {
                             {props.client.created} @ {props.client.login}
                         </p>
                     </div>
-                </BaseLevel>
+                </div>
 
                 <PillTag color={pillColor()} icon={pillIcon} label={`${props.client.progress}`} />
-            </BaseLevel>
+            </div>
         </CardBox>
     )
 }
