@@ -6,7 +6,7 @@ import { getPageTitle } from '../src/app'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import BaseButton from '../components/BaseButton'
-import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail } from '@mdi/js'
+import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail, mdiUpload } from '@mdi/js'
 import CardBox from '../components/CardBox'
 import { Formik, Form, Field } from 'formik'
 import FormField from '../components/FormField'
@@ -14,6 +14,7 @@ import BaseButtons from '../components/BaseButtons'
 import BaseDivider from '../components/BaseDivider'
 import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
 import FormCheckRadio from '../components/FormCheckRadio'
+import FormFilePicker from '../components/FormFilePicker'
 
 const FormsPage = () => {
     return (
@@ -145,6 +146,11 @@ const FormsPage = () => {
 
                         </Form>
                     </Formik>
+                    
+                    <BaseDivider />
+                    <FormField>
+                        <FormFilePicker label="upload" color="info" icon={mdiUpload}/>
+                    </FormField>
                 </CardBox>
             </SectionMain>
         </>

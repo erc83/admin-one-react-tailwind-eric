@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { ReactElement } from 'react'
-import { mdiAccount, mdiGithub, mdiMail, mdiAsterisk, mdiFormTextboxPassword } from '@mdi/js'
+import type { ReactElement } from 'react'
+import { mdiAccount, mdiGithub, mdiMail, mdiAsterisk, mdiFormTextboxPassword, mdiUpload } from '@mdi/js'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import { getPageTitle } from '../src/app'
 import { useAppSelector } from '../src/stores/hooks'
@@ -15,6 +15,7 @@ import FormField from '../components/FormField'
 import CardBoxComponentFooter from '../components/CardBoxComponentFooter'
 import BaseButtons from '../components/BaseButtons'
 import BaseDivider from '../components/BaseDivider'
+import FormFilePicker from '../components/FormFilePicker'
 
 type UserForm = {
     name: string
@@ -53,41 +54,51 @@ const ProfilePage = () => {
                 <UserCard className="mb-6"/>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <CardBox>
-                        <Formik
-                            initialValues={ userForm }
-                            onSubmit={(values: UserForm) => alert(JSON.stringify( values, null, 2 ))}
-                        >
-                            <Form>
-                                <CardBoxComponentBody>
-                                    <FormField 
-                                        label="Name"
-                                        help="Required. Your name"
-                                        labelFor='name'
-                                        icons={[mdiAccount]}
-                                        >
-                                        <Field  name="name" id="name" placeholder="Name" />
-                                    </FormField>
-                                    <FormField
-                                        label="E-mail"
-                                        help="Required. Your e-mail"
-                                        labelFor='email'
-                                        icons={[mdiMail]}
-                                    >
-                                        <Field  name="email" id="email" placeholder="E-mail" />
-                                    </FormField>
-                                </CardBoxComponentBody>
-                                <CardBoxComponentFooter>
-                                    <BaseButtons>
-                                        <BaseButton color="info" type="submit" label="Submit"/>
-                                        <BaseButton color="info" label="Options" outline/>
+                    
+                    <div className="flex flex-col">
+                        <CardBox className="mb-6">
+                            <FormField label="Avatar" help="Max 500kb">
+                                <FormFilePicker label="Upload" color="info" icon={mdiUpload} />
+                            </FormField>
+                        </CardBox>
 
-                                    </BaseButtons>
-                                </CardBoxComponentFooter>
-                            </Form>
-                        </Formik>
-                    </CardBox>
 
+                        <CardBox className="flex-1" hasComponentLayout>
+                            <Formik
+                                initialValues={ userForm }
+                                onSubmit={(values: UserForm) => alert(JSON.stringify( values, null, 2 ))}
+                            >
+                                <Form>
+                                    <CardBoxComponentBody>
+                                        <FormField 
+                                            label="Name"
+                                            help="Required. Your name"
+                                            labelFor='name'
+                                            icons={[mdiAccount]}
+                                            >
+                                            <Field  name="name" id="name" placeholder="Name" />
+                                        </FormField>
+                                        <FormField
+                                            label="E-mail"
+                                            help="Required. Your e-mail"
+                                            labelFor='email'
+                                            icons={[mdiMail]}
+                                            >
+                                            <Field  name="email" id="email" placeholder="E-mail" />
+                                        </FormField>
+                                    </CardBoxComponentBody>
+                                    <CardBoxComponentFooter>
+                                        <BaseButtons>
+                                            <BaseButton color="info" type="submit" label="Submit"/>
+                                            <BaseButton color="info" label="Options" outline/>
+
+                                        </BaseButtons>
+                                    </CardBoxComponentFooter>
+                                </Form>
+                            </Formik>
+                        </CardBox>
+                    </div>
+                    
                     <CardBox hasComponentLayout>
                         <Formik
                             initialValues={{
