@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 import SectionFullScreen from '../components/SectionFullScreen'
 import CardBox from '../components/CardBox'
 import {Formik, Form, Field} from 'formik'

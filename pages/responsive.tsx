@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 import SectionMain from '../components/SectionMain'
 
 

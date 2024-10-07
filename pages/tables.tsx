@@ -8,7 +8,7 @@ import LayoutAuthenticated from '../components/layouts/Authenticated'
 import NotificationBar from '../components/NotificationBar'
 import CardBox from '../components/CardBox'
 import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 import TableSampleClients from '../components/TableSampleClients'
 
 const TablesPage = () => {

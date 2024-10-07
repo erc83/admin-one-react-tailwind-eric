@@ -9,7 +9,7 @@ import { StyleKey } from '../interfaces'
 import { gradientBgPurplePink } from '../src/colors'
 import { useAppDispatch } from '../src/stores/hooks'
 import { setDarkMode, setStyle } from '../src/stores/styleSlice'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 const StyleSelect = () => {
   const dispatch = useAppDispatch()
