@@ -16,11 +16,7 @@ import CardBoxComponentFooter from '../components/CardBoxComponentFooter'
 import BaseButtons from '../components/BaseButtons'
 import BaseDivider from '../components/BaseDivider'
 import FormFilePicker from '../components/FormFilePicker'
-
-type UserForm = {
-    name: string
-    email: string
-}
+import { UserForm } from '../interfaces'
 
 const ProfilePage = () => {
 

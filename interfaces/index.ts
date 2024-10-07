@@ -62,3 +62,8 @@ export type Client = {
     created: string
     created_mm_dd_yyyy: string
 }
+
+export type UserForm = {
+    name: string
+    email: string
+}
