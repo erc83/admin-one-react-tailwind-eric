@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 
 type Props = {
     noPadding?: boolean
-    className: string
+    className?: string
     children?: ReactNode
 }
 

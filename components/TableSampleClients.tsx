@@ -6,6 +6,7 @@ import BaseButton from './BaseButton'
 import BaseButtons from './BaseButtons'
 /* import BaseLevel from './BaseLevel' */
 import UserAvatar from './UserAvatar'
+import CardBoxModal from '../components/CardBoxModal'
 
 const TableSampleClients = () => {
     const { clients } = useSampleClients()
@@ -24,8 +25,40 @@ const TableSampleClients = () => {
         pagesList.push(i)
     }
 
+    const [isModalInfoActive, setIsModalInfoActive] = useState(false)
+    const [isModalTrashActive, setIsModalTrashActive] = useState(false)
+
+    const handleModalAction = () => {
+        setIsModalInfoActive(false)
+        setIsModalTrashActive(false)
+    }
+
+
     return (
         <>
+            <CardBoxModal 
+                title='Sample modal' 
+                buttonColor='info' 
+                buttonLabel='Done' 
+                isActive={isModalInfoActive} 
+                onConfirm={handleModalAction} 
+                onCancel={handleModalAction}
+            >
+                <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                <p>This is sample modal</p>
+            </CardBoxModal>
+            <CardBoxModal 
+                title='Please confirm' 
+                buttonColor='danger' 
+                buttonLabel='Confirm' 
+                isActive={isModalTrashActive} 
+                onConfirm={handleModalAction} 
+                onCancel={handleModalAction}
+            >
+                <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                <p>This is sample modal</p>
+            </CardBoxModal>
+
             <table>
                 <thead>
                     <tr>
@@ -61,8 +94,18 @@ const TableSampleClients = () => {
                             </td>
                             <td className="before:hidden lg:w-1 whitespace-nowrap">
                                 <BaseButtons type="justify-start lg:justify-end" noWrap>
-                                    <BaseButton color="info" icon={mdiEye} small />
-                                    <BaseButton color="danger" icon={mdiTrashCan} small />
+                                    <BaseButton 
+                                        color="info" 
+                                        icon={mdiEye} 
+                                        onClick={() => setIsModalInfoActive(true)}
+                                        small 
+                                    />
+                                    <BaseButton 
+                                        color="danger" 
+                                        icon={mdiTrashCan} 
+                                        onClick={() => setIsModalTrashActive(true)}
+                                        small 
+                                    />
                                 </BaseButtons>
                             </td>
                         </tr>

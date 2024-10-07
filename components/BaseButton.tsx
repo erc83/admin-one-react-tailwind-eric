@@ -78,7 +78,7 @@ export default function BaseButton({
 
   if ( href && !disabled ) {
     return (
-      <Link href={href} target={target} passHref className={componentClassString} >
+      <Link href={href} target={target} className={componentClassString} >
           {componentChildren}
       </Link>
     )
