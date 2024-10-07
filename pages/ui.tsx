@@ -3,13 +3,15 @@ import {
     mdiAlertCircle,
     mdiCheckCircle,
     mdiContrastCircle,
+    mdiClose,
     mdiInformation,
     mdiOpenInNew,
     mdiReload,
     mdiTrendingUp,
 } from '@mdi/js'
 import Head from 'next/head'
-import { ReactElement } from 'react'
+import { useState } from 'react'
+import type { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
 import { appTitle } from '../src/config'
@@ -28,12 +30,15 @@ import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
 import { Field, Formik } from 'formik'
 import FormCheckRadio from '../components/FormCheckRadio'
 import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
+import CardBoxModal from '../components/CardBoxModal'
 
 const UiPage = () => {
     
     const dispatch = useAppDispatch()
-
-    const NotificationSampleButton = <BaseButton color="white" label="Button" roundedFull small />
+    
+    const [isModalInfoActive, setIsModalInfoActive] = useState(false)
+    const [isModalDangerActive, setIsModalDangerActive] = useState(false)
+    const [isModalSuccessActive, setIsModalSuccessActive] = useState(false)
 
     const CardSamplesFooter = (
         <BaseButtons>
@@ -42,6 +47,39 @@ const UiPage = () => {
         </BaseButtons>
     )
 
+    const modalSampleCardClassName = 'cursor-pointer md:w-7/12 lg:w5/12 shadow-2xl md:mx-auto'
+
+    const modalSampleContents = (
+        <>
+            <p>Lorem ipsum dolor sit amet consectetur</p> <b>adipisicing elit.</b>
+            <p>This is sample modal in Ui Page</p>
+        </>
+    )
+
+    const modalFooterInfo = (
+        <BaseButtons>
+            <BaseButton label="Confirm" color="info" />
+            <BaseButton label="Cancel" color="info" outline />
+        </BaseButtons>
+    )
+
+    const modalFooterDanger = (
+        <BaseButtons>
+            <BaseButton label="Done" color="danger" />
+        </BaseButtons>
+    )
+
+    const modalFooterSuccess = (
+        <BaseButtons>
+            <BaseButton label="Done" color="success" />
+        </BaseButtons>
+    )
+
+    const handleModalAction = () => {
+        setIsModalInfoActive(false)
+        setIsModalDangerActive(false)
+        setIsModalSuccessActive(false)
+    }
 
     return (
         <>
@@ -62,6 +100,85 @@ const UiPage = () => {
                     </div>
                 </CardBox>
             </SectionMain>
+
+            <SectionTitle>Modal examples</SectionTitle>
+
+            <SectionMain>
+                <div className="space-y-12">
+                    <CardBox
+                        className={modalSampleCardClassName}
+                        footer={modalFooterInfo}
+                        onClick={() => setIsModalInfoActive(true)}
+                        isHoverable
+                    >
+                        <CardBoxComponentTitle title="Please confirm action">
+                            <BaseButton icon={mdiClose} color="whiteDark" small roundedFull />
+                        </CardBoxComponentTitle>
+                        
+                        <div className="space-y-3">
+                            <p>Click to see in action</p>
+                        </div>
+                    </CardBox>
+
+                    <CardBox
+                        className={modalSampleCardClassName}
+                        footer={modalFooterDanger}
+                        onClick={() => setIsModalDangerActive(true)}
+                        isHoverable
+                    >
+                        <CardBoxComponentTitle title="Unhandled exception" />
+                            <div className="space-y-3">
+                        <p>Click to see in action</p>
+                        </div>
+                    </CardBox>
+
+                    <CardBox
+                        className={modalSampleCardClassName}
+                        footer={modalFooterSuccess}
+                        onClick={() => setIsModalSuccessActive(true)}
+                        isHoverable
+                    >
+                        <CardBoxComponentTitle title="Success" />
+                        <div className="space-y-3">
+                        <p>Click to see in action</p>
+                        </div>
+                    </CardBox>
+                </div>
+            </SectionMain>
+
+            {/* Window modal */}
+            <CardBoxModal
+                title="Please confirm action"
+                buttonColor="info"
+                buttonLabel="Confirm"
+                isActive={isModalInfoActive}
+                onConfirm={handleModalAction}
+                onCancel={handleModalAction}
+            >
+                {modalSampleContents}
+            </CardBoxModal>
+
+            <CardBoxModal
+                title="Unhandled exception"
+                buttonColor="danger"
+                buttonLabel="error"
+                isActive={isModalDangerActive}
+                onConfirm={handleModalAction}
+                onCancel={handleModalAction}
+            >
+                {modalSampleContents}
+            </CardBoxModal>
+
+            <CardBoxModal
+                title="Success"
+                buttonColor="success"
+                buttonLabel="Done"
+                isActive={isModalSuccessActive}
+                onConfirm={handleModalAction}
+                onCancel={handleModalAction}
+            >
+                {modalSampleContents}
+            </CardBoxModal>
 
             <Formik initialValues={{ outline: false}} onSubmit={() => null}>
                 {
