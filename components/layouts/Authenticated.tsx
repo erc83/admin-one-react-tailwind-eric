@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect } from 'react'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { mdiForwardburger, mdiBackburger, mdiMenu } from '@mdi/js'
 import menuAside from '../../src/menuAside'
 import menuNavBar from '../../src/menuNavBar'
@@ -22,8 +23,7 @@ type Props = {
 
 export default function LayoutAuthenticated({ children }: Props ) {
   const dispatch = useAppDispatch();
-  
-  
+
   useEffect(() => {
       dispatch(
         setUser({
@@ -35,21 +35,32 @@ export default function LayoutAuthenticated({ children }: Props ) {
       )
   })
   
-
-
-
   const darkMode = useAppSelector((state) => state.style.darkMode)
 
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
 
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouterChangeStart = () => {
+      setIsAsideMobileExpanded(false)
+      setIsAsideLgActive(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouterChangeStart)
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouterChangeStart)
+    }
+
+  }, [router.events, dispatch])
+
+
   const layoutAsidePadding = 'xl:pl-60'
 
   return (
     <>
-      {/* <GlobalStyle />
-      <GlobalDarkMode /> */}
-
       <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
           <div 
             className={`${layoutAsidePadding} ${
