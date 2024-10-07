@@ -12,6 +12,8 @@ import { setUser } from '../../src/stores/mainSlice'
 /* import GlobalStyle from '../globals/Style'
 import GlobalDarkMode from '../globals/DarkMode' */
 import { useAppDispatch, useAppSelector } from '../../src/stores/hooks'
+import FormField from '../FormField'
+import { Field, Form, Formik } from 'formik'
 
 type Props = {
   children?: ReactNode,
@@ -69,6 +71,21 @@ export default function LayoutAuthenticated({ children }: Props ) {
                 onClick={() => setIsAsideLgActive}  
               >
                 <BaseIcon path={mdiMenu} size="24" />
+              </NavBarItemPlain>
+
+              <NavBarItemPlain>
+                <Formik
+                  initialValues={{
+                    search:'',
+                  }}
+                  onSubmit={(values) => alert(JSON.stringify( values, null, 2 ))}
+                >
+                  <Form>
+                    <FormField>
+                      <Field name="search" placeholder="Search" />
+                    </FormField>
+                  </Form>
+                </Formik>
               </NavBarItemPlain>
             </NavBar>
             <AsideMenu
