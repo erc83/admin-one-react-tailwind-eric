@@ -62,6 +62,7 @@ const CardBoxModal = ({
                                 color="whiteDark"
                                 small
                                 roundedFull
+                                onClick={onCancel}
                             />
                         )
                     }
