@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 import SectionMain from '../components/SectionMain'
 
 
@@ -11,7 +11,7 @@ const ResponsivePage = () => {
     return (
         <>
             <Head>
-                <title>Responsive - {appTitle} </title>
+                <title>{getPageTitle('Responsive')}</title>
             </Head>
 
             <SectionTitle first>Mobile & Table</SectionTitle>
@@ -22,7 +22,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt= {`Image Mobile & Table - ${appTitle}`}
+                        alt= {`Image Mobile & Table - ${getPageTitle('Responsive')}`}
                     />
                 </div>
             </SectionMain>
@@ -35,7 +35,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt={`Image Small laptop 1024px - ${appTitle}`}
+                        alt={`Image Small laptop 1024px - ${getPageTitle('Responsive')}`}
                     />
                 </div>
             </SectionMain>
@@ -48,7 +48,7 @@ const ResponsivePage = () => {
                         width={1920} 
                         height={960} 
                         className="block" 
-                        alt={`Image Laptop & Desktop - ${appTitle}`}
+                        alt={`Image Laptop & Desktop - ${getPageTitle('Responsive')}`}
                     />
                 </div>
             </SectionMain>

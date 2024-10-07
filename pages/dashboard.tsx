@@ -27,7 +27,7 @@ import ChartLineSample from '../components/charts/ChartLineSample'
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/TableSampleClients'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 
 const Dashboard = () => {
     const { clients } = useSampleClients()
@@ -47,7 +47,7 @@ const Dashboard = () => {
     return (
         <>
             <Head>
-                <title>DashBoard - { appTitle }</title>
+                <title>{getPageTitle('Dashboard')}</title>
             </Head>
             <SectionMain>
                 <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>

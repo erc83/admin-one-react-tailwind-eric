@@ -14,7 +14,7 @@ import { useState } from 'react'
 import type { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 import { useAppDispatch } from '../src/stores/hooks'
 import BaseButton from '../components/BaseButton'
 import BaseButtons from '../components/BaseButtons'
@@ -84,7 +84,7 @@ const UiPage = () => {
     return (
         <>
             <Head>
-                <title>UI - {appTitle}</title>
+                <title>{getPageTitle('Ui')}</title>
             </Head>
 
             <SectionTitle first>Dark mode</SectionTitle>

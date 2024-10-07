@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import BaseButton from '../components/BaseButton'
@@ -19,7 +19,7 @@ const FormsPage = () => {
     return (
         <>
             <Head>
-                <title>Forms - {appTitle}</title>
+                <title>{getPageTitle('Forms')}</title>
             </Head>
 
             <SectionMain>

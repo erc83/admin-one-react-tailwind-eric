@@ -9,7 +9,7 @@ import { StyleKey } from '../interfaces'
 import { gradientBgPurplePink } from '../src/colors'
 import { useAppDispatch } from '../src/stores/hooks'
 import { setDarkMode, setStyle } from '../src/stores/styleSlice'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 
 const StyleSelect = () => {
   const dispatch = useAppDispatch()
@@ -32,7 +32,7 @@ const StyleSelect = () => {
   return (
   <>  
     <Head>
-      <title>{appTitle}</title>
+      <title>{getPageTitle("Pick a Style")}</title>
     </Head>
     <div className={`flex min-h-screen items-center justify-center ${gradientBgPurplePink}`}>
       <SectionMain>

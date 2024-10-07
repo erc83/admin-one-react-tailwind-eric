@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
-import SectionTitle from '../components/SectionTitle'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 import SectionFullScreen from '../components/SectionFullScreen'
 import CardBox from '../components/CardBox'
 import {Formik, Form, Field} from 'formik'
@@ -25,7 +24,7 @@ const LoginPage = () => {
     return (
         <>
             <Head>
-                <title>Login - {appTitle}</title>
+                <title>{getPageTitle('Login')}</title>
             </Head>
             <SectionFullScreen bg="purplePink">
                 <CardBox className="w-11/12 md:w-7/12 lg:6/12 xl:w-4/12 shadow-2xl">

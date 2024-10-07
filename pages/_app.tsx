@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import type { AppProps } from 'next/app'
 import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next';
@@ -50,6 +51,23 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
             <link rel="icon" href="/admin-one-react-tailwind/favicon.png" />
           </Head>
+
+
+          {/* Pendiente la configuracion con el dominio en Analytics.google */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-T6BPTRYMX8"
+            strategy="afterInteractive"
+          />
+
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-T6BPTRYMX8');
+            `}
+          </Script>
+
           <Component {...pageProps} />
         </>
       )}

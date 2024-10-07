@@ -8,14 +8,14 @@ import LayoutAuthenticated from '../components/layouts/Authenticated'
 import NotificationBar from '../components/NotificationBar'
 import CardBox from '../components/CardBox'
 import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 import TableSampleClients from '../components/TableSampleClients'
 
 const TablesPage = () => {
     return (
         <>
             <Head>
-                <title>Table - {appTitle}</title>
+                <title>{getPageTitle('Tables')}</title>
             </Head>
             <SectionMain>
                 <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>
