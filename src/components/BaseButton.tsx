@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { getButtonColor } from '../colors'
-import BaseIcon from './Icon'
+import BaseIcon from './Icon/BaseIcon'
 import { ColorButtonKey } from '../interfaces'
 
 type Props = {

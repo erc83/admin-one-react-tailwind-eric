@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { mdiMinus, mdiPlus } from '@mdi/js'
-import BaseIcon from '../Icon'
+import BaseIcon from '../Icon/BaseIcon'
 import Link from 'next/link'
 import { getButtonColor } from '../../colors'
 import AsideMenuList from './List'

@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from 'react'
 import { ColorKey } from '../interfaces'
 import { colorsBgLight, colorsOutline } from '../colors'
 import BaseButton from './BaseButton'
-import BaseIcon from './Icon'
+import BaseIcon from './Icon/BaseIcon'
 /* import BaseLevel from './BaseLevel' */
 
 type Props = {

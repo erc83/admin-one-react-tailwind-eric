@@ -5,7 +5,7 @@ import { colorsText } from '../../colors'
 import CardBox from '.'
 import NumberDynamic from '../NumberDynamic'
 import PillTagTrend from '../PillTag/Trend'
-import BaseIcon from '../Icon'
+import BaseIcon from '../Icon/BaseIcon'
 import BaseButton from '../BaseButton'
 
 type Props = {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { mdiLogout, mdiClose } from '@mdi/js'
-import BaseIcon from '../Icon'
+import BaseIcon from '../Icon/BaseIcon'
 import AsideMenuItem from './Item'
 import AsideMenuList from './List'
 import { MenuAsideItem } from '../../interfaces'

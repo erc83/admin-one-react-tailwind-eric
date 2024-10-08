@@ -1,5 +1,5 @@
 import React from 'react'
-import BaseIcon from '../Icon'
+import BaseIcon from '../Icon/BaseIcon'
 
 type Props = {
     label?: string
