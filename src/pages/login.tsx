@@ -13,12 +13,25 @@ import BaseButtons from '../components/BaseButtons'
 import BaseButton from '../components/BaseButton'
 import LayoutGuest from '../layouts/Guest'
 
+type LoginForm = {
+    login: string
+    password: string
+    remember: boolean
+}
+
 const LoginPage = () => {
 
     const router = useRouter()
 
-    const handleSubmit = () => {
-        router.push('dashboard')
+    const handleSubmit = (formValues: LoginForm ) => {
+        router.push('/dashboard')
+        console.log('Form values:', formValues)
+    }
+
+    const initialValues: LoginForm = {
+        login: 'john.doe',
+        password: 'bG1sL9eQ1uD2sK3b',
+        remember: true
     }
 
     return (
@@ -29,8 +42,8 @@ const LoginPage = () => {
             <SectionFullScreen bg="purplePink">
                 <CardBox className="w-11/12 md:w-7/12 lg:6/12 xl:w-4/12 shadow-2xl">
                     <Formik
-                        initialValues={{ login: 'john.doe', password: 'bG1sL9eQ1uD2sK3b', remember: true }}
-                        onSubmit={() => handleSubmit()}
+                        initialValues={initialValues}
+                        onSubmit={handleSubmit}
                     >
                         <Form>
                             <FormField>
