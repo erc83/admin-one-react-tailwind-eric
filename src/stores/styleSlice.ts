@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import * as styles from '../styles'
+import * as styles from '../css/styles/styles'
 import { darkModeKey, styleKey } from '../config'
 
 interface StyleState {

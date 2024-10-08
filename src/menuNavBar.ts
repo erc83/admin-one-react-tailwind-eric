@@ -10,7 +10,7 @@ import {
   mdiThemeLightDark,
   mdiGithub,
 } from '@mdi/js'
-import { MenuNavBarItem } from '../interfaces'
+import { MenuNavBarItem } from './interfaces'
 
 const menuNavBar: MenuNavBarItem[] = [
   {
