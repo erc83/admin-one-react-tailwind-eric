@@ -9,10 +9,8 @@ import NavBar from '../components/NavBar'
 import NavBarItemPlain from '../components/NavBar/item/Plain'
 import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
-import { setUser } from '../stores/mainSlice'
 //import GlobalStyle from '../globals/Style'
 //import GlobalDarkMode from '../globals/DarkMode'
-import { useAppDispatch } from '../stores/hooks'
 import FormField from '../components/Form/Field'
 import { Field, Form, Formik } from 'formik'
 
@@ -22,18 +20,6 @@ type Props = {
 
 
 export default function LayoutAuthenticated({ children }: Props ) {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-      dispatch(
-        setUser({
-          name: 'Eric EEMM',
-          email: 'eric@example.com',
-          avatar:
-            'https://res.cloudinary.com/dhavhzmvy/image/upload/v1728053925/template-next-tailwind/avatar_eric_q1rfvc.png',
-        })
-      )
-  })
 
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
@@ -52,7 +38,7 @@ export default function LayoutAuthenticated({ children }: Props ) {
       router.events.off('routeChangeStart', handleRouterChangeStart)
     }
 
-  }, [router.events, dispatch])
+  }, [ router.events ])
 
 
   const layoutAsidePadding = 'xl:pl-60'

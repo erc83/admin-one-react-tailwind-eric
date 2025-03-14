@@ -3,16 +3,14 @@ import React, { ReactNode } from 'react'
 
 type Props = {
   username: string
-  avatar?: string | null
   api?: string
   className?: string 
   children?: ReactNode
 }
 
 
-export default function UserAvatar({ username, avatar=null, api='avataaars', className='', children }: Props) {
-  const avatarImage = 
-    avatar ?? `https://api.dicebear.com/9.x/${api}/svg?seed=${username.replace(/[^a-z0-9]+/i, '-')}.svg`
+export default function UserAvatar({ username, api='avataaars', className='', children }: Props) {
+  const avatarImage = `https://api.dicebear.com/9.x/${api}/svg?seed=${username.replace(/[^a-z0-9]+/gi, '-')}`
 
   return (
     <div className={className}>

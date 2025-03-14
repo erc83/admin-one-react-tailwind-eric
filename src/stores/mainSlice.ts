@@ -1,19 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { UserPayloadObject } from '../interfaces'
+import UserAvatar from '../components/UserAvatar/index';
 
 interface MainState {
   userName: string,
   userEmail: null|string,
-  userAvatar: null|string,
   isFieldFocusRegistered: boolean,
   clients: object,
   history: object,
 }
 
 const initialState: MainState = {
-  userName: '',
-  userEmail: null,
-  userAvatar: null,
+  userName: 'Eric Espinoza',
+  userEmail: 'espinoza.eric@gmail.com',
   /* Field focus with ctrl+k (to register only once) */
   isFieldFocusRegistered: false,
   /* Sample data (commonly used) */
@@ -29,7 +28,6 @@ export const mainSlice = createSlice({
     setUser: (state, action:PayloadAction<UserPayloadObject>) => {
       state.userName = action.payload.name
       state.userEmail = action.payload.email
-      state.userAvatar = action.payload.avatar
     },
   },
 })
