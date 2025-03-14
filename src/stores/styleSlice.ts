@@ -1,32 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import * as styles from '../css/styles/styles'
-import { darkModeKey, styleKey } from '../config'
+//import * as styles from '../css/styles/styles'
+//import { darkModeKey } from '../config'
 
 interface StyleState {
-  asideStyle: string,
-  asideScrollbarsStyle: string,
-  asideBrandStyle: string,
-  asideMenuItemStyle: string,
-  asideMenuItemActiveStyle: string,
-  asideMenuDropdownStyle: string,
-  navBarItemLabelStyle: string,
-  navBarItemLabelHoverStyle: string,
-  navBarItemLabelActiveColorStyle: string,
-  overlayStyle: string,
   darkMode: boolean
 }
 
 const initialState: StyleState = {
-  asideStyle: '',
-  asideScrollbarsStyle: '',
-  asideBrandStyle: '',
-  asideMenuItemStyle: '',
-  asideMenuItemActiveStyle: '',
-  asideMenuDropdownStyle: '',
-  navBarItemLabelStyle: '',
-  navBarItemLabelHoverStyle: '',
-  navBarItemLabelActiveColorStyle: '',
-  overlayStyle: '',
   darkMode: false
 }
 
@@ -37,9 +17,9 @@ export const styleSlice = createSlice({
     setDarkMode: (state, action: PayloadAction<boolean|null>) => {
       state.darkMode = action.payload !== null ? action.payload : !state.darkMode
 
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem(darkModeKey, state.darkMode ? '1' : '0')
-      }
+      //if (typeof localStorage !== 'undefined') {
+      //  localStorage.setItem(darkModeKey, state.darkMode ? '1' : '0')
+      //}
 
       if (typeof document !== 'undefined') {
         document.body.classList[state.darkMode ? 'add' : 'remove'](
@@ -47,30 +27,21 @@ export const styleSlice = createSlice({
         )
 
         document.documentElement.classList[state.darkMode ? 'add' : 'remove'](
+          'dark',
           'dark-scrollbars-compat'
         )
       }
     },
 
-    setStyle: (state, action: PayloadAction<string>) => {
-      if (!styles[action.payload]) {
-        return
-      }
-
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem(styleKey, action.payload)
-      }
-
-      const style = styles[action.payload]
-
-      for (const key in style) {
-        state[`${key}Style`] = style[key]
-      }
-    },
+    //you can persist dark mode setting
+    //if (typeof localStorage !== 'undefined') {
+    //  localStorage.setItem(styleKey, action.payload)
+    //}
+  
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setDarkMode, setStyle } = styleSlice.actions
+export const { setDarkMode } = styleSlice.actions
 
 export default styleSlice.reducer

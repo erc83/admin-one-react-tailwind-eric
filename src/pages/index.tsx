@@ -5,10 +5,10 @@ import React, { ReactElement } from 'react'
 import CardBox from '../components/CardBox'
 import LayoutGuest from '../layouts/Guest'
 import SectionMain from '../components/Section/SectionMain'
-import { StyleKey } from '../interfaces'
+//import { StyleKey } from '../interfaces'
 import { gradientBgPurplePink } from '../colors'
 import { useAppDispatch } from '../stores/hooks'
-import { setDarkMode, setStyle } from '../stores/styleSlice'
+import { setDarkMode } from '../stores/styleSlice'
 import { getPageTitle } from '../config'
 
 const StyleSelect = () => {
@@ -16,14 +16,18 @@ const StyleSelect = () => {
 
   dispatch(setDarkMode(false))
 
-  const styles: StyleKey[] = ['white', 'basic']
+  const styles = ['white', 'basic']
 
   const router = useRouter()
 
-  const handleStylePick = (e: React.MouseEvent, style: StyleKey) => {
+  const handleStylePick = (e: React.MouseEvent, style:string) => {
     e.preventDefault()
 
-    dispatch(setStyle(style))
+    document.documentElement.classList.forEach((token) => {
+      if (token.indexOf('style') === 0 ) {
+        document.documentElement.classList.replace( token, `style-${style}`)
+      }
+    })
 
     router.push('/dashboard')
 

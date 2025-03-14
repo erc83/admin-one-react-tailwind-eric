@@ -34,9 +34,6 @@ export type ColorButtonKey = "white" | "whiteDark" | "lightDark" | "contrast" | 
 export type BgKey = "purplePink" | "pinkRed"
 
 
-export type StyleKey = 'white' | 'basic'
-
-
 export type TransactionType = 'withdraw' | 'deposit' | 'invoice' | 'payment'
 
 export type Transaction = {
@@ -67,3 +64,7 @@ export type UserForm = {
     name: string
     email: string
 }
+
+
+
+

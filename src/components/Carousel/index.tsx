@@ -29,8 +29,8 @@ const Carousel = ({ slides }: Props) => {
                 }}
             >
                 {
-                    slides.map((image) => (
-                        <img src={image}/>
+                    slides.map((image, index) => (
+                        <img key={index} src={image}/>
                     ))
                 }
             </div>
