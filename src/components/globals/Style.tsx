@@ -1,9 +1,9 @@
-import { useDispatch } from 'react-redux'
+//import { useDispatch } from 'react-redux'
 //import { styleKey } from '../../config'
 //import { setStyle } from '../../stores/styleSlice'
 
 export default function GlobalStyle() {
-  const dispatch = useDispatch()
+  //const dispatch = useDispatch()
   
   //dispatch(
   //  setStyle(

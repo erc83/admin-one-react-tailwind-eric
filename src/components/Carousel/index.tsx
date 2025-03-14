@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { mdiArrowCollapseRight, mdiArrowCollapseLeft } from '@mdi/js'
 import BaseButton from '../BaseButton'
+import Image from 'next/image'
 
 type Props = {
     slides: string[],
@@ -8,14 +9,14 @@ type Props = {
 
 const Carousel = ({ slides }: Props) => {
 
-    let [current, setCurrent ] = useState(0)
+    const [current, setCurrent ] = useState(0)
 
-    let previousSlice = () => {
+    const previousSlice = () => {
         if(current === 0) setCurrent(slides.length-1)
         else setCurrent(current - 1)
     } 
 
-    let nextSlice = () => {
+    const nextSlice = () => {
         if(current === slides.length - 1) setCurrent(0)
         else setCurrent(current + 1)
     } 
@@ -30,7 +31,7 @@ const Carousel = ({ slides }: Props) => {
             >
                 {
                     slides.map((image, index) => (
-                        <img key={index} src={image}/>
+                        <Image key={index} src={image} alt={'Images Carrousel'} width={100} height={100}/>
                     ))
                 }
             </div>

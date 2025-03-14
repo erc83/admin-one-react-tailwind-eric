@@ -5,7 +5,7 @@ type Props = {
     children: ReactNode
 }
 
-const SectionBanner = ({ className = '', children }) => {
+const SectionBanner = ({ className = '', children }: Props) => {
     return(
         <div className={`${className} rounded-2x1 py-12 px-6 lg:px-12 text-center`}>{children}</div>
     )

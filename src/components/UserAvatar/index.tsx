@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React, { ReactNode } from 'react'
 //import Image from 'next/image'
 
@@ -14,7 +15,7 @@ export default function UserAvatar({ username, api='avataaars', className='', ch
 
   return (
     <div className={className}>
-      <img
+      <Image
         src={avatarImage}
         alt={username}
         width={24}
