@@ -8,7 +8,7 @@ import SectionMain from '../components/Section/SectionMain'
 //import { StyleKey } from '../interfaces'
 import { gradientBgPurplePink } from '../colors'
 import { useAppDispatch } from '../stores/hooks'
-import { setDarkMode } from '../stores/styleSlice'
+import { setDarkMode } from '../stores/darkModeSlice'
 import { getPageTitle } from '../config'
 
 const StyleSelect = () => {

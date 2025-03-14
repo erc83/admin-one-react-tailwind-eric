@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 //import { darkModeKey } from '../../config'
-import { setDarkMode } from '../../stores/styleSlice'
+import { setDarkMode } from '../../stores/darkModeSlice'
 
 export default function GlobalDarkMode() {
   const dispatch = useDispatch()
