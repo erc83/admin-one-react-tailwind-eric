@@ -33,14 +33,15 @@ const CardBoxModal = ({
 
     const footer = (
         <BaseButtons>
-            <BaseButton label={buttonLabel} color={buttonColor} onClick={onConfirm} /> 
+            <BaseButton label={buttonLabel} color={buttonColor} onClick={onConfirm} isGrouped /> 
             {
                 !!onCancel && (
                     <BaseButton
                         label="Cancel"
                         color={buttonColor}
                         outline
-                        onClick={onCancel}                    
+                        onClick={onCancel}
+                        isGrouped
                     />
                 )
             }

@@ -61,8 +61,8 @@ const LoginPage = () => {
                             <BaseDivider />
 
                             <BaseButtons>
-                                <BaseButton type="submit" label="Login" color="info" />
-                                <BaseButton href="/dashboard" label="Home" color="info" outline />
+                                <BaseButton type="submit" label="Login" color="info" isGrouped/>
+                                <BaseButton href="/dashboard" label="Home" color="info" outline isGrouped/>
                             </BaseButtons>
 
                         </Form>

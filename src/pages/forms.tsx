@@ -79,8 +79,8 @@ const FormsPage = () => {
                             <BaseDivider />
 
                             <BaseButtons>
-                                <BaseButton type="submit" color="info" label="Submit"/>
-                                <BaseButton type="reset" color="info"  outline label="Reset"/>
+                                <BaseButton type="submit" color="info" label="Submit" isGrouped/>
+                                <BaseButton type="reset" color="info"  outline label="Reset" isGrouped/>
                             </BaseButtons>
                         </Form>
                     </Formik>

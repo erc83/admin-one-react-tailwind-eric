@@ -31,7 +31,7 @@ const Carousel = ({ slides }: Props) => {
             >
                 {
                     slides.map((image, index) => (
-                        <Image key={index} src={image} alt={'Images Carrousel'} width={100} height={100}/>
+                        <Image key={index} src={image} alt={'Images Carrousel'} width={1500} height={800}/>
                     ))
                 }
             </div>

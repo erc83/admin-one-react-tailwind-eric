@@ -100,12 +100,14 @@ const TableSampleClients = () => {
                                         icon={mdiEye} 
                                         onClick={() => setIsModalInfoActive(true)}
                                         small 
+                                        isGrouped
                                     />
                                     <BaseButton 
                                         color="danger" 
                                         icon={mdiTrashCan} 
                                         onClick={() => setIsModalTrashActive(true)}
                                         small 
+                                        isGrouped
                                     />
                                 </BaseButtons>
                             </td>

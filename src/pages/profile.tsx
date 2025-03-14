@@ -152,8 +152,8 @@ const ProfilePage = () => {
 
                                 <CardBoxComponentFooter>
                                 <BaseButtons>
-                                    <BaseButton color="info" type="submit" label="Submit" />
-                                    <BaseButton color="info" label="Options" outline />
+                                    <BaseButton color="info" type="submit" label="Submit" isGrouped />
+                                    <BaseButton color="info" label="Options" outline isGrouped />
                                 </BaseButtons>
                                 </CardBoxComponentFooter>
 
