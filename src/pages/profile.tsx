@@ -11,11 +11,11 @@ import UserCard from '../components/CardBox/User'
 import CardBox from '../components/CardBox'
 import { Formik, Form, Field } from 'formik'
 import CardBoxComponentBody from '../components/CardBox/Component/Body'
-import FormField from '../components/Form/Field'
+import FormField from '../components/FormField/Field'
 import CardBoxComponentFooter from '../components/CardBox/Component/Footer'
 import BaseButtons from '../components/BaseButtons'
 import BaseDivider from '../components/BaseDivider'
-import FormFilePicker from '../components/Form/FilePicker'
+import FormFilePicker from '../components/FormField/FilePicker'
 import { UserForm } from '../interfaces'
 
 const ProfilePage = () => {

@@ -28,8 +28,8 @@ import CardBoxComponentTitle from '../components/CardBox/Component/Title'
 import SectionTitleLineWithButton from '../components/Section/SectionTitleLineWithButton'
 import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
 import { Field, Formik } from 'formik'
-import FormCheckRadio from '../components/Form/CheckRadio'
-import FormCheckRadioGroup from '../components/Form/CheckRadioGroup'
+import FormCheckRadio from '../components/FormField/CheckRadio'
+import FormCheckRadioGroup from '../components/FormField/CheckRadioGroup'
 import CardBoxModal from '../components/CardBox/Modal'
 
 const UiPage = () => {

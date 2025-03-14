@@ -11,7 +11,7 @@ import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
 //import GlobalStyle from '../globals/Style'
 //import GlobalDarkMode from '../globals/DarkMode'
-import FormField from '../components/Form/Field'
+import FormField from '../components/FormField'
 import { Field, Form, Formik } from 'formik'
 
 type Props = {
@@ -76,8 +76,10 @@ export default function LayoutAuthenticated({ children }: Props ) {
                   onSubmit={(values) => alert(JSON.stringify( values, null, 2 ))}
                 >
                   <Form>
-                    <FormField>
-                      <Field name="search" placeholder="Search" />
+                    <FormField isBorderless isTransparent>
+                      {({ className }) => (
+                        <Field name="search" placeholder="Search" className={className} />
+                      )}
                     </FormField>
                   </Form>
                 </Formik>
