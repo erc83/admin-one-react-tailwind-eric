@@ -98,13 +98,13 @@ const FormsPage = () => {
                         <Form>
                             <FormField label="Checkbox">
                                 <FormCheckRadioGroup>
-                                    <FormCheckRadio type="checkbox" label="Lorem">
+                                    <FormCheckRadio type="checkbox" label="Lorem" isGrouped>
                                         <Field type="checkbox" name="checkboxes" value="lorem" />
                                     </FormCheckRadio>
-                                    <FormCheckRadio type="checkbox" label="Ipsum">
+                                    <FormCheckRadio type="checkbox" label="Ipsum" isGrouped>
                                         <Field type="checkbox" name="checkboxes" value="ipsum" />
                                     </FormCheckRadio>
-                                    <FormCheckRadio type="checkbox" label="Dolore">
+                                    <FormCheckRadio type="checkbox" label="Dolore" isGrouped>
                                         <Field type="checkbox" name="checkboxes" value="dolore" />
                                     </FormCheckRadio>
                                 </FormCheckRadioGroup>
@@ -113,10 +113,10 @@ const FormsPage = () => {
                             <BaseDivider />
                             <FormField label="Radio">
                                 <FormCheckRadioGroup>
-                                    <FormCheckRadio type="radio" label="Lorem">
+                                    <FormCheckRadio type="radio" label="Lorem" isGrouped>
                                         <Field type="checkbox" name="radio" value="lorem" />
                                     </FormCheckRadio>
-                                    <FormCheckRadio type="radio" label="Ipsum">
+                                    <FormCheckRadio type="radio" label="Ipsum" isGrouped>
                                         <Field type="checkbox" name="checkboxes" value="ipsum" />
                                     </FormCheckRadio>
                                 </FormCheckRadioGroup>
@@ -126,13 +126,13 @@ const FormsPage = () => {
 
                             <FormField label="Switch">
                                 <FormCheckRadioGroup>
-                                    <FormCheckRadio type="switch" label="Lorem">
+                                    <FormCheckRadio type="switch" label="Lorem" isGrouped>
                                         <Field type="checkbox" name="outline" values="lorem" />
                                     </FormCheckRadio>
-                                    <FormCheckRadio type="switch" label="Ipsum">
+                                    <FormCheckRadio type="switch" label="Ipsum" isGrouped>
                                         <Field type="checkbox" name="outline1" values="ipsum" />
                                     </FormCheckRadio>
-                                    <FormCheckRadio type="switch" label="switch1">
+                                    <FormCheckRadio type="switch" label="switch1" isGrouped>
                                         <Field type="checkbox" name="outline2" values="doloressss" />
                                     </FormCheckRadio>
                                 </FormCheckRadioGroup>

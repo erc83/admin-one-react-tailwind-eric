@@ -277,16 +277,16 @@ const UiPage = () => {
                                     <>
 
                                         <FormCheckRadioGroup>
-                                            <FormCheckRadio type="switch" label="Outline">
+                                            <FormCheckRadio type="switch" label="Outline" isGrouped>
                                                 <Field type="checkbox" name="outline" />
                                             </FormCheckRadio>
-                                            <FormCheckRadio type="switch" label="Small">
+                                            <FormCheckRadio type="switch" label="Small" isGrouped>
                                                 <Field type="checkbox" name="small" />
                                             </FormCheckRadio>
-                                            <FormCheckRadio type="switch" label="Rounded">
+                                            <FormCheckRadio type="switch" label="Rounded" isGrouped>
                                                 <Field type="checkbox" name="rounded" />
                                             </FormCheckRadio>
-                                            <FormCheckRadio type="switch" label="Disabled">
+                                            <FormCheckRadio type="switch" label="Disabled" isGrouped>
                                                 <Field type="checkbox" name="disabled" />
                                             </FormCheckRadio>
                                         </FormCheckRadioGroup>
@@ -432,13 +432,13 @@ const UiPage = () => {
                                 ({ values }) => (
                                     <>
                                         <FormCheckRadioGroup>
-                                            <FormCheckRadio type="switch" label="Outline">
+                                            <FormCheckRadio type="switch" label="Outline" isGrouped>
                                                 <Field type="checkbox" name="outline" />
                                             </FormCheckRadio>
-                                            <FormCheckRadio type="switch" label="Small">
+                                            <FormCheckRadio type="switch" label="Small" isGrouped>
                                                 <Field type="checkbox" name="small" />
                                             </FormCheckRadio>
-                                            <FormCheckRadio type="switch" label="Icon">
+                                            <FormCheckRadio type="switch" label="Icon" isGrouped>
                                                 <Field type="checkbox" name="icon" />
                                             </FormCheckRadio>
                                         </FormCheckRadioGroup>
