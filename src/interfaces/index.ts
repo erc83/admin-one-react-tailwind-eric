@@ -49,7 +49,6 @@ export type TrendType = 'up' | 'down' | 'success' | 'danger' | 'warning' | 'info
 
 export type Client = {
     id: number
-    avatar: string
     login: string
     name: string
     company: string
@@ -60,8 +59,8 @@ export type Client = {
 }
 
 export type UserForm = {
-    name: string
-    email: string
+    name: string | null
+    email: string | null
 }
 
 

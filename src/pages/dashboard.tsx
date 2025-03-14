@@ -135,7 +135,7 @@ const Dashboard = () => {
                 </NotificationBar>
 
                 <CardBox hasTable>
-                    <TableSampleClients />
+                    <TableSampleClients clients={clients}/>
                 </CardBox>
 
                 

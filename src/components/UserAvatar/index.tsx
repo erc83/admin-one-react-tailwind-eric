@@ -17,7 +17,7 @@ export default function UserAvatar({ username, api='avataaars', className='', ch
     <div className={className}>
       <Image
         src={avatarImage}
-        alt={username}
+        alt={username ?? undefined}
         width={24}
         height={24}
         className={`rounded-full block h-auto w-full max-w-full bg-gray-100 dark:bg-slate-800`}

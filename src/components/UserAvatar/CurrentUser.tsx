@@ -12,7 +12,7 @@ export default function UserAvatarCurrentUser({ className='', children }: Props 
   const userEmail = useAppSelector((state) => state.main.userEmail)
 
   return (
-    <UserAvatar username={userEmail} className={className}>
+    <UserAvatar username={userEmail ?? ''} className={className}>
       {children}
     </UserAvatar>
   )
