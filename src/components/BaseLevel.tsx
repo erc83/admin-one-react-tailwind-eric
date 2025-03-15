@@ -3,11 +3,16 @@ import React, { ReactNode } from 'react'
 type Props = {
   mobile?: boolean
   type?: string
-  className?: string 
+  className?: string
   children?: ReactNode
 }
 
-export default function BaseLevel({ mobile = false, type = 'justify-between', className='', children }: Props ) {
+export default function BaseLevel({
+  mobile = false,
+  type = 'justify-between',
+  className = '',
+  children,
+}: Props) {
   const parentClass = `${type} items-center`
 
   const parentMobileClass = 'flex'

@@ -7,14 +7,14 @@ interface DarkModeState {
 }
 
 const initialState: DarkModeState = {
-  isEnable: false
+  isEnable: false,
 }
 
 export const styleSlice = createSlice({
   name: 'darkMode',
   initialState,
   reducers: {
-    setDarkMode: (state, action: PayloadAction<boolean|null>) => {
+    setDarkMode: (state, action: PayloadAction<boolean | null>) => {
       state.isEnable = action.payload !== null ? action.payload : !state.isEnable
 
       //if (typeof localStorage !== 'undefined') {
@@ -22,9 +22,7 @@ export const styleSlice = createSlice({
       //}
 
       if (typeof document !== 'undefined') {
-        document.body.classList[state.isEnable ? 'add' : 'remove'](
-          'dark-scrollbars'
-        )
+        document.body.classList[state.isEnable ? 'add' : 'remove']('dark-scrollbars')
 
         document.documentElement.classList[state.isEnable ? 'add' : 'remove'](
           'dark',
@@ -37,7 +35,6 @@ export const styleSlice = createSlice({
     //if (typeof localStorage !== 'undefined') {
     //  localStorage.setItem(styleKey, action.payload)
     //}
-  
   },
 })
 

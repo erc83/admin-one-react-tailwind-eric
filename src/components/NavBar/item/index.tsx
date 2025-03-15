@@ -11,15 +11,14 @@ import { MenuNavBarItem } from '../../../interfaces'
 import { setDarkMode } from '../../../stores/darkModeSlice'
 
 type Props = {
-  item: MenuNavBarItem,
+  item: MenuNavBarItem
 }
 
-export default function NavBarItem({ item }: Props ) {
-
+export default function NavBarItem({ item }: Props) {
   const dispatch = useAppDispatch()
 
   const userName = useAppSelector((state) => state.main.userName)
-  
+
   const [isDropdownActive, setIsDropdownActive] = useState(false)
 
   const componentClass = [
@@ -34,28 +33,28 @@ export default function NavBarItem({ item }: Props ) {
   const itemLabel = item.isCurrentUser ? userName : item.label
 
   const handleMenuClick = () => {
-    if(item.menu) {
+    if (item.menu) {
       setIsDropdownActive(!isDropdownActive)
     }
 
-    if(item.isToggleLightDark) {
+    if (item.isToggleLightDark) {
       dispatch(setDarkMode(null))
     }
   }
 
   const NavBarItemComponentContents = (
     <>
-      <div 
+      <div
         className={`flex items-center ${
-          item.menu 
-            ? 'bg-gray-100 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent p-3 lg:p-0' 
+          item.menu
+            ? 'bg-gray-100 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent p-3 lg:p-0'
             : ''
         }`}
         onClick={handleMenuClick}
       >
         {item.isCurrentUser && <UserAvatarCurrentUser className="w-6 h-6 mr-3 inline-flex" />}
         {item.icon && <BaseIcon path={item.icon} className="transition-colors" />}
-        <span 
+        <span
           className={`px-2 transition-colors ${
             item.isDesktopNoLabel && item.icon ? 'lg:hidden' : ''
           }`}
@@ -63,11 +62,11 @@ export default function NavBarItem({ item }: Props ) {
           {itemLabel}
         </span>
         {item.menu && (
-          <BaseIcon 
-            path={isDropdownActive ? mdiChevronUp : mdiChevronDown} 
-            className="hidden lg:inline-flex transition-colors" 
-            />
-          )}
+          <BaseIcon
+            path={isDropdownActive ? mdiChevronUp : mdiChevronDown}
+            className="hidden lg:inline-flex transition-colors"
+          />
+        )}
       </div>
       {item.menu && (
         <div

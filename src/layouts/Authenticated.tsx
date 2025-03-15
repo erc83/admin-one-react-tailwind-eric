@@ -15,12 +15,10 @@ import FormField from '../components/FormField'
 import { Field, Form, Formik } from 'formik'
 
 type Props = {
-  children?: ReactNode,
+  children?: ReactNode
 }
 
-
-export default function LayoutAuthenticated({ children }: Props ) {
-
+export default function LayoutAuthenticated({ children }: Props) {
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
 
@@ -37,60 +35,55 @@ export default function LayoutAuthenticated({ children }: Props ) {
     return () => {
       router.events.off('routeChangeStart', handleRouterChangeStart)
     }
-
-  }, [ router.events ])
-
+  }, [router.events])
 
   const layoutAsidePadding = 'xl:pl-60'
 
   return (
     <>
       <div className={`overflow-hidden lg:overflow-visible`}>
-          <div 
-            className={`${layoutAsidePadding} ${
-              isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''
-            } pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100`}
+        <div
+          className={`${layoutAsidePadding} ${
+            isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''
+          } pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100`}
+        >
+          <NavBar
+            menu={menuNavBar}
+            className={`${layoutAsidePadding} ${isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''}`}
           >
-            <NavBar 
-              menu={menuNavBar} 
-              className={`${layoutAsidePadding} ${isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''}`}
+            <NavBarItemPlain
+              display="flex lg:hidden"
+              onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
             >
-              <NavBarItemPlain 
-                display="flex lg:hidden"
-                onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
-              >
-                <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
-              </NavBarItemPlain>
-              <NavBarItemPlain 
-                display="hidden lg:flex xl:hidden"
-                onClick={() => setIsAsideLgActive}  
-              >
-                <BaseIcon path={mdiMenu} size="24" />
-              </NavBarItemPlain>
+              <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
+            </NavBarItemPlain>
+            <NavBarItemPlain display="hidden lg:flex xl:hidden" onClick={() => setIsAsideLgActive}>
+              <BaseIcon path={mdiMenu} size="24" />
+            </NavBarItemPlain>
 
-              <NavBarItemPlain>
-                <Formik
-                  initialValues={{
-                    search:'',
-                  }}
-                  onSubmit={(values) => alert(JSON.stringify( values, null, 2 ))}
-                >
-                  <Form>
-                    <FormField isBorderless isTransparent>
-                      {({ className }) => (
-                        <Field name="search" placeholder="Search" className={className} />
-                      )}
-                    </FormField>
-                  </Form>
-                </Formik>
-              </NavBarItemPlain>
-            </NavBar>
-            <AsideMenu
-              isAsideMobileExpanded={isAsideMobileExpanded}
-              isAsideLgActive={isAsideLgActive}
-              menu={menuAside}
-              onAsideLgClose={() => setIsAsideLgActive( false )}
-            />
+            <NavBarItemPlain>
+              <Formik
+                initialValues={{
+                  search: '',
+                }}
+                onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
+              >
+                <Form>
+                  <FormField isBorderless isTransparent>
+                    {({ className }) => (
+                      <Field name="search" placeholder="Search" className={className} />
+                    )}
+                  </FormField>
+                </Form>
+              </Formik>
+            </NavBarItemPlain>
+          </NavBar>
+          <AsideMenu
+            isAsideMobileExpanded={isAsideMobileExpanded}
+            isAsideLgActive={isAsideLgActive}
+            menu={menuAside}
+            onAsideLgClose={() => setIsAsideLgActive(false)}
+          />
           {children}
           <FooterBar>
             Code on{` `}

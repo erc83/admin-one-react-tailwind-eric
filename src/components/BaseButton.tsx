@@ -19,28 +19,28 @@ type Props = {
   active?: boolean
   disabled?: boolean
   roundedFull?: boolean
-  isGrouped?:boolean
+  isGrouped?: boolean
   onClick?: (e: React.MouseEvent) => void
 }
 
 export default function BaseButton({
-  label, 
-  icon, 
-  iconSize, 
-  href, 
-  target, 
-  type, 
-  color = 'white', 
-  asAnchor=false, 
-  className= '', 
-  small=false, 
-  outline=false, 
-  active=false, 
-  disabled=false, 
-  roundedFull=false,
+  label,
+  icon,
+  iconSize,
+  href,
+  target,
+  type,
+  color = 'white',
+  asAnchor = false,
+  className = '',
+  small = false,
+  outline = false,
+  active = false,
+  disabled = false,
+  roundedFull = false,
   onClick,
   ...props
-}: Props ) {
+}: Props) {
   const componentClass = [
     'inline-flex',
     'justify-center',
@@ -57,7 +57,7 @@ export default function BaseButton({
     className,
   ]
 
-  if( props.isGrouped ) {
+  if (props.isGrouped) {
     componentClass.push('mr-3 last:mr-0 mb-3')
   }
 
@@ -70,22 +70,22 @@ export default function BaseButton({
   }
 
   if (disabled) {
-    componentClass.push( outline ? 'opacity-50' : 'opacity-70')
+    componentClass.push(outline ? 'opacity-50' : 'opacity-70')
   }
 
   const componentClassString = componentClass.join(' ')
 
   const componentChildren = (
     <>
-      { icon && <BaseIcon path={icon} size={iconSize} /> }
-      { label && <span className={small && icon ? 'px-1' : 'px-2'}>{label}</span> }
+      {icon && <BaseIcon path={icon} size={iconSize} />}
+      {label && <span className={small && icon ? 'px-1' : 'px-2'}>{label}</span>}
     </>
   )
 
-  if ( href && !disabled ) {
+  if (href && !disabled) {
     return (
-      <Link href={href} target={target} className={componentClassString} >
-          {componentChildren}
+      <Link href={href} target={target} className={componentClassString}>
+        {componentChildren}
       </Link>
     )
   }

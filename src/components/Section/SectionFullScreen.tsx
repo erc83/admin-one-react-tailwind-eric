@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react'
 import { BgKey } from '../../interfaces'
-import { gradientBgPurplePink, gradientBgDark, gradientBgPinkRed } from "../../colors"
+import { gradientBgPurplePink, gradientBgDark, gradientBgPinkRed } from '../../colors'
 import { useAppSelector } from '../../stores/hooks'
 
 type Props = {
-  bg: BgKey,
-  children: ReactNode,
+  bg: BgKey
+  children: ReactNode
 }
 
-export default function SectionFullScreen({ bg, children }: Props ) {
+export default function SectionFullScreen({ bg, children }: Props) {
   const darkMode = useAppSelector((state) => state.darkMode.isEnable)
 
   let componentClass = 'flex min-h-screen items-center justify-center '
@@ -22,5 +22,4 @@ export default function SectionFullScreen({ bg, children }: Props ) {
   }
 
   return <div className={componentClass}>{children}</div>
-  
 }

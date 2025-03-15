@@ -15,8 +15,8 @@ export default function Error() {
       </Head>
 
       <SectionFullScreen bg="pinkRed">
-        <CardBox 
-          className="w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 shadow-2xl" 
+        <CardBox
+          className="w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 shadow-2xl"
           footer={<BaseButton href="/dashboard" label="Done" color="danger" />}
         >
           <div className="space-y-3">
@@ -30,6 +30,6 @@ export default function Error() {
   )
 }
 
-Error.getLayout = function getLayout(page: ReactElement ) {
+Error.getLayout = function getLayout(page: ReactElement) {
   return <LayoutGuest>{page}</LayoutGuest>
 }

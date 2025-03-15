@@ -4,14 +4,14 @@
 
 export default function GlobalStyle() {
   //const dispatch = useDispatch()
-  
+
   //dispatch(
   //  setStyle(
-  //    typeof localStorage !== "undefined" && localStorage[styleKey] 
-  //      ? localStorage[styleKey] 
+  //    typeof localStorage !== "undefined" && localStorage[styleKey]
+  //      ? localStorage[styleKey]
   //      : "basic"
   //  )
   //)
 
-  return null;
+  return null
 }

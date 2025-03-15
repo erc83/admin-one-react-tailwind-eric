@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react'
 import { mdiClose, mdiDotsVertical } from '@mdi/js'
-import {containerMaxW} from '../../config'
+import { containerMaxW } from '../../config'
 import BaseIcon from '../Icon/BaseIcon'
 import NavBarItemPlain from './item/Plain'
 import NavBarMenuList from './MenuList'
@@ -12,8 +12,7 @@ type Props = {
   children: ReactNode
 }
 
-
-export default function NavBar({ menu,  className='', children }: Props ) {
+export default function NavBar({ menu, className = '', children }: Props) {
   const [isMenuNavBarActive, setIsMenuNavBarActive] = useState(false)
 
   const handleMenuNavBarToggleClick = () => {
@@ -21,7 +20,7 @@ export default function NavBar({ menu,  className='', children }: Props ) {
   }
 
   return (
-    <nav 
+    <nav
       className={`${className} top-0 inset-x-0 fixed bg-gray-50 h-14 z-30 transition-position w-screen lg:w-auto dark:bg-slate-800`}
     >
       <div className={`flex lg:items-stretch ${containerMaxW}`}>

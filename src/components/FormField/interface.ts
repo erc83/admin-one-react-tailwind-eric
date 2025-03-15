@@ -1,3 +1,3 @@
 export type FormFieldData = {
-    className: string
+  className: string
 }

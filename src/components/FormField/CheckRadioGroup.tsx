@@ -1,17 +1,17 @@
 import { ReactNode } from 'react'
 
 type Props = {
-    isColumn?: boolean
-    className?: string
-    children: ReactNode
+  isColumn?: boolean
+  className?: string
+  children: ReactNode
 }
 
 const FormCheckRadioGroup = (props: Props) => {
-    return (
-        <div className={`flex justify-start flex-wrap -mb-3 ${props.isColumn ? 'flex-col' : ''}`}>
-            {props.children}
-        </div>
-    )
+  return (
+    <div className={`flex justify-start flex-wrap -mb-3 ${props.isColumn ? 'flex-col' : ''}`}>
+      {props.children}
+    </div>
+  )
 }
 
 export default FormCheckRadioGroup

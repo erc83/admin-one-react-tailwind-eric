@@ -3,12 +3,11 @@ import { useAppSelector } from '../../stores/hooks'
 import UserAvatar from '.'
 
 type Props = {
-  className?: string,
+  className?: string
   children?: ReactNode
 }
 
-export default function UserAvatarCurrentUser({ className='', children }: Props ) {
-
+export default function UserAvatarCurrentUser({ className = '', children }: Props) {
   const userEmail = useAppSelector((state) => state.main.userEmail)
 
   return (

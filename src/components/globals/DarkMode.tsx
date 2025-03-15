@@ -14,6 +14,6 @@ export default function GlobalDarkMode() {
   //      isSetInLocalStorage ? localStorage[darkModeKey] === "1" : isSetInMedia
   //  )
   //)
-  
-  return null;
+
+  return null
 }

@@ -10,12 +10,11 @@ type Props = {
   onAsideLgClose: () => void
 }
 
-
-export default function AsideMenu({ 
-  isAsideMobileExpanded = false, 
-  isAsideLgActive = false, 
-  ...props  // menu and onAsideLgClose
-}: Props ) {
+export default function AsideMenu({
+  isAsideMobileExpanded = false,
+  isAsideLgActive = false,
+  ...props // menu and onAsideLgClose
+}: Props) {
   return (
     <>
       <AsideMenuLayer
@@ -25,7 +24,7 @@ export default function AsideMenu({
         }`}
         onAsideLgCloseClick={props.onAsideLgClose}
       />
-      {isAsideLgActive && <OverlayLayer zIndex="z-30" onClick={props.onAsideLgClose}/>}
+      {isAsideLgActive && <OverlayLayer zIndex="z-30" onClick={props.onAsideLgClose} />}
     </>
   )
 }

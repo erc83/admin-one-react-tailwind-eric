@@ -5,13 +5,20 @@ import React, { ReactNode } from 'react'
 type Props = {
   username: string
   api?: string
-  className?: string 
+  className?: string
   children?: ReactNode
 }
 
-
-export default function UserAvatar({ username, api='avataaars', className='', children }: Props) {
-  const avatarImage = `https://api.dicebear.com/9.x/${api}/svg?seed=${username.replace(/[^a-z0-9]+/gi, '-')}`
+export default function UserAvatar({
+  username,
+  api = 'avataaars',
+  className = '',
+  children,
+}: Props) {
+  const avatarImage = `https://api.dicebear.com/9.x/${api}/svg?seed=${username.replace(
+    /[^a-z0-9]+/gi,
+    '-'
+  )}`
 
   return (
     <div className={className}>
@@ -22,7 +29,7 @@ export default function UserAvatar({ username, api='avataaars', className='', ch
         height={24}
         className={`rounded-full block h-auto w-full max-w-full bg-gray-100 dark:bg-slate-800`}
       />
-      { children }
+      {children}
     </div>
   )
 }

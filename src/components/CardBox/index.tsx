@@ -15,18 +15,17 @@ type Props = {
   onClick?: (e: React.MouseEvent) => void
 }
 
-
-export default function CardBox({ 
-  rounded = 'rounded-2xl', 
-  flex='flex-col', 
-  className='', 
-  hasComponentLayout=false, 
-  hasTable=false, 
-  isHoverable=false, 
-  isModal=false, 
-  children, 
+export default function CardBox({
+  rounded = 'rounded-2xl',
+  flex = 'flex-col',
+  className = '',
+  hasComponentLayout = false,
+  hasTable = false,
+  isHoverable = false,
+  isModal = false,
+  children,
   footer,
-  onClick
+  onClick,
 }: Props) {
   const componentClass = [
     'bg-white flex',
@@ -48,7 +47,7 @@ export default function CardBox({
     ) : (
       <>
         <CardBoxComponentBody noPadding={hasTable}>{children}</CardBoxComponentBody>
-        { footer && <CardBoxComponentFooter>{footer}</CardBoxComponentFooter> }
+        {footer && <CardBoxComponentFooter>{footer}</CardBoxComponentFooter>}
       </>
     )
   )

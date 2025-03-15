@@ -13,7 +13,7 @@ type Props = {
   isDropdownList?: boolean
 }
 
-const  AsideMenuItem = ({ item, isDropdownList = false }: Props  ) => {
+const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
   const [isLinkActive, setIsLinkActive] = useState(false)
   const [isDropdownActive, setIsDropdownActive] = useState(false)
 
@@ -22,7 +22,7 @@ const  AsideMenuItem = ({ item, isDropdownList = false }: Props  ) => {
   const { asPath, isReady } = useRouter()
 
   useEffect(() => {
-    if(item.href && isReady){
+    if (item.href && isReady) {
       const linkPathName = new URL(item.href, location.href).pathname
 
       const activePathname = new URL(asPath, location.href).pathname
@@ -31,16 +31,13 @@ const  AsideMenuItem = ({ item, isDropdownList = false }: Props  ) => {
     }
   }, [item.href, isReady, asPath])
 
-
-
   const asideMenuItemInnerContents = (
     <>
-      {
-        item.icon && (
-          <BaseIcon path={item.icon} className={`flex-none" ${activeClassAddon} w="w-16" size="18`} />
+      {item.icon && (
+        <BaseIcon path={item.icon} className={`flex-none" ${activeClassAddon} w="w-16" size="18`} />
       )}
 
-      <span 
+      <span
         className={`grow text-ellipsis line-clamp-1 ${
           item.menu ? '' : 'pr-12'
         } ${activeClassAddon} `}
@@ -48,10 +45,10 @@ const  AsideMenuItem = ({ item, isDropdownList = false }: Props  ) => {
         {item.label}
       </span>
       {item.menu && (
-        <BaseIcon 
-          path={isDropdownActive ? mdiMinus : mdiPlus} 
-          className={`flex-none ${activeClassAddon}`} 
-          w="w-12" 
+        <BaseIcon
+          path={isDropdownActive ? mdiMinus : mdiPlus}
+          className={`flex-none ${activeClassAddon}`}
+          w="w-12"
         />
       )}
     </>
