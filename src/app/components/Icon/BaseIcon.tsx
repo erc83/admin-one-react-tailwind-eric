@@ -9,7 +9,7 @@ type Props = {
   children?: ReactNode
 }
 
-export default function BaseIcon({ path, w = 'w-6', h = 'h-6', size, className, children }: Props) {
+export default function BaseIcon({ path, w = 'w-6', h = 'h-6', size = null, className = '', children }: Props) {
   const iconSize = size ?? 16
 
   return (
