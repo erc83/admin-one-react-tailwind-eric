@@ -3,7 +3,7 @@ import type { ColorButtonKey } from '../../interfaces'
 import BaseButtons from '../BaseButtons'
 import BaseButton from '../BaseButton'
 import OverlayLayer from '../OverlayLayer'
-import CardBoxComponentTitle from '../CardBox/Component/Title'
+import CardBoxComponentTitle from './Component/Title'
 import { mdiClose } from '@mdi/js'
 import CardBox from '.'
 

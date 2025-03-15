@@ -2,7 +2,17 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  basePath: "",
+  basePath: "/admin-one-react-tailwind-eric",
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: 'admin-one-react-tailwind-eric',
+        basePath: false,
+        permanent: false
+      }
+    ]
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
