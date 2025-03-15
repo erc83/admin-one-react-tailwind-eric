@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import { mdiMinus, mdiPlus } from '@mdi/js'
 import BaseIcon from '../Icon/BaseIcon'
@@ -6,7 +7,7 @@ import { getButtonColor } from '../../colors'
 import AsideMenuList from './List'
 import { MenuAsideItem } from '../../interfaces'
 //import { useAppSelector } from '../../stores/hooks'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 type Props = {
   item: MenuAsideItem
@@ -19,17 +20,11 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
 
   const activeClassAddon = !item.color && isLinkActive ? 'aside-menu-item-active font-bold' : ''
 
-  const { asPath, isReady } = useRouter()
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (item.href && isReady) {
-      const linkPathName = new URL(item.href, location.href).pathname
-
-      const activePathname = new URL(asPath, location.href).pathname
-
-      setIsLinkActive(linkPathName === activePathname)
-    }
-  }, [item.href, isReady, asPath])
+      setIsLinkActive(item.href === pathname)
+  }, [item.href, pathname]);
 
   const asideMenuItemInnerContents = (
     <>

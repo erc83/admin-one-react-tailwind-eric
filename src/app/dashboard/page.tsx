@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import type { ReactElement } from 'react'
 import Head from 'next/head'

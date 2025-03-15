@@ -1,3 +1,4 @@
+"use client"
 import React, { ReactNode, useState } from 'react'
 import { mdiClose, mdiDotsVertical } from '@mdi/js'
 import { containerMaxW } from '../../config'

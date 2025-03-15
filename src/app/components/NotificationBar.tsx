@@ -1,3 +1,4 @@
+"use client"
 import { mdiClose } from '@mdi/js'
 import React, { ReactNode, useState } from 'react'
 import { ColorKey } from '../interfaces'
