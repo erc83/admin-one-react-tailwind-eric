@@ -2,8 +2,8 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  basePath: "/admin-one-react-tailwind-eric",
-  async redirects() {
+  basePath: "",
+/*  async redirects() {
     return [
       {
         source: "/",
@@ -12,7 +12,7 @@ const nextConfig = {
         permanent: false
       }
     ]
-  },
+  },*/
   images: {
     unoptimized: true,
     remotePatterns: [
