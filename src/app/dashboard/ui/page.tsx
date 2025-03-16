@@ -1,3 +1,5 @@
+"use client"
+
 import {
   mdiAlert,
   mdiAlertCircle,
@@ -12,25 +14,25 @@ import {
 import Head from 'next/head'
 import { useState } from 'react'
 import type { ReactElement } from 'react'
-import LayoutAuthenticated from '../layouts/Authenticated'
-import SectionTitle from '../components/Section/SectionTitle'
-import { getPageTitle } from '../config'
-import { useAppDispatch } from '../stores/hooks'
-import BaseButton from '../components/BaseButton'
-import BaseButtons from '../components/BaseButtons'
-import SectionMain from '../components/Section/SectionMain'
-import NotificationBar from '../components/NotificationBar'
-import CardBox from '../components/CardBox'
-import { setDarkMode } from '../stores/darkModeSlice'
-import BaseDivider from '../components/BaseDivider'
-import PillTag from '../components/PillTag'
-import CardBoxComponentTitle from '../components/CardBox/Component/Title'
-import SectionTitleLineWithButton from '../components/Section/SectionTitleLineWithButton'
-import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
+import LayoutAuthenticated from '../../layouts/Authenticated'
+import SectionTitle from '../../components/Section/SectionTitle'
+import { getPageTitle } from '../../config'
+import { useAppDispatch } from '../../stores/hooks'
+import BaseButton from '../../components/BaseButton'
+import BaseButtons from '../../components/BaseButtons'
+import SectionMain from '../../components/Section/SectionMain'
+import NotificationBar from '../../components/NotificationBar'
+import CardBox from '../../components/CardBox'
+import { setDarkMode } from '../../stores/darkModeSlice'
+import BaseDivider from '../../components/BaseDivider'
+import PillTag from '../../components/PillTag'
+import CardBoxComponentTitle from '../../components/CardBox/Component/Title'
+import SectionTitleLineWithButton from '../../components/Section/SectionTitleLineWithButton'
+import CardBoxComponentEmpty from '../../components/CardBox/Component/Empty'
 import { Field, Formik } from 'formik'
-import FormCheckRadio from '../components/FormField/CheckRadio'
-import FormCheckRadioGroup from '../components/FormField/CheckRadioGroup'
-import CardBoxModal from '../components/CardBox/Modal'
+import FormCheckRadio from '../../components/FormField/CheckRadio'
+import FormCheckRadioGroup from '../../components/FormField/CheckRadioGroup'
+import CardBoxModal from '../../components/CardBox/Modal'
 
 const UiPage = () => {
   const dispatch = useAppDispatch()

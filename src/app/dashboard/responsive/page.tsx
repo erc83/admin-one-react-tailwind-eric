@@ -1,10 +1,12 @@
+"use client"
+
 import React, { ReactElement } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import LayoutAuthenticated from '../layouts/Authenticated'
-import SectionTitle from '../components/Section/SectionTitle'
-import { getPageTitle } from '../config'
-import SectionMain from '../components/Section/SectionMain'
+import LayoutAuthenticated from '../../layouts/Authenticated'
+import SectionTitle from '../../components/Section/SectionTitle'
+import { getPageTitle } from '../../config'
+import SectionMain from '../../components/Section/SectionMain'
 
 const ResponsivePage = () => {
   return (

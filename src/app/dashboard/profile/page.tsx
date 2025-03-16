@@ -1,3 +1,5 @@
+"use client"
+
 import Head from 'next/head'
 import type { ReactElement } from 'react'
 import {
@@ -8,22 +10,22 @@ import {
   mdiFormTextboxPassword,
   mdiUpload,
 } from '@mdi/js'
-import LayoutAuthenticated from '../layouts/Authenticated'
-import { getPageTitle } from '../config'
-import { useAppSelector } from '../stores/hooks'
-import SectionMain from '../components/Section/SectionMain'
-import SectionTitleLineWithButton from '../components/Section/SectionTitleLineWithButton'
-import BaseButton from '../components/BaseButton'
-import UserCard from '../components/CardBox/User'
-import CardBox from '../components/CardBox'
+import LayoutAuthenticated from '../../layouts/Authenticated'
+import { getPageTitle } from '../../config'
+import { useAppSelector } from '../../stores/hooks'
+import SectionMain from '../../components/Section/SectionMain'
+import SectionTitleLineWithButton from '../../components/Section/SectionTitleLineWithButton'
+import BaseButton from '../../components/BaseButton'
+import UserCard from '../../components/CardBox/User'
+import CardBox from '../../components/CardBox'
 import { Formik, Form, Field } from 'formik'
-import CardBoxComponentBody from '../components/CardBox/Component/Body'
-import FormField from '../components/FormField/Field'
-import CardBoxComponentFooter from '../components/CardBox/Component/Footer'
-import BaseButtons from '../components/BaseButtons'
-import BaseDivider from '../components/BaseDivider'
-import FormFilePicker from '../components/FormField/FilePicker'
-import { UserForm } from '../interfaces'
+import CardBoxComponentBody from '../../components/CardBox/Component/Body'
+import FormField from '../../components/FormField/Field'
+import CardBoxComponentFooter from '../../components/CardBox/Component/Footer'
+import BaseButtons from '../../components/BaseButtons'
+import BaseDivider from '../../components/BaseDivider'
+import FormFilePicker from '../../components/FormField/FilePicker'
+import { UserForm } from '../../interfaces'
 
 const ProfilePage = () => {
   const userName = useAppSelector((state) => state.main.userName)

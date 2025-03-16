@@ -1,16 +1,19 @@
+"use client"
+
 import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
 import React, { ReactElement } from 'react'
 import Head from 'next/head'
-import SectionMain from '../components/Section/SectionMain'
-import SectionTitleLineWithButton from '../components/Section/SectionTitleLineWithButton'
-import BaseButton from '../components/BaseButton'
-import LayoutAuthenticated from '../layouts/Authenticated'
-import NotificationBar from '../components/NotificationBar'
-import CardBox from '../components/CardBox'
-import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
-import { getPageTitle } from '../config'
-import TableSampleClients from '../components/Table/SampleClients'
-import { useSampleClients } from '../hooks/sampleData'
+import SectionMain from '../../components/Section/SectionMain'
+import SectionTitleLineWithButton from '../../components/Section/SectionTitleLineWithButton'
+import BaseButton from '../../components/BaseButton'
+import LayoutAuthenticated from '../../layouts/Authenticated'
+import NotificationBar from '../../components/NotificationBar'
+import CardBox from '../../components/CardBox'
+import CardBoxComponentEmpty from '../../components/CardBox/Component/Empty'
+import { getPageTitle } from '../../config'
+import TableSampleClients from '../../components/Table/SampleClients'
+import { useSampleClients } from '../../hooks/sampleData'
+
 
 const TablesPage = () => {
   const { clients } = useSampleClients()

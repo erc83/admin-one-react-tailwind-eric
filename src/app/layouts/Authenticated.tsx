@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect } from 'react'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { mdiForwardburger, mdiBackburger, mdiMenu } from '@mdi/js'
 import menuAside from '../menuAside'
 import menuNavBar from '../menuNavBar'
@@ -30,12 +30,17 @@ export default function LayoutAuthenticated({ children }: Props) {
       setIsAsideLgActive(false)
     }
 
-    router.events.on('routeChangeStart', handleRouterChangeStart)
+    const handlePopState = () => {
+      handleRouterChangeStart()
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    
 
     return () => {
-      router.events.off('routeChangeStart', handleRouterChangeStart)
+      window.removeEventListener('popstate', handlePopState)
     }
-  }, [router.events])
+  }, [])
 
   const layoutAsidePadding = 'xl:pl-60'
 

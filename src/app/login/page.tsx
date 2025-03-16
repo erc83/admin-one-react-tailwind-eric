@@ -1,3 +1,5 @@
+"use client";
+
 import Head from 'next/head'
 import { ReactElement } from 'react'
 // import LayoutAuthenticated from '../layouts/Authenticated'
@@ -5,7 +7,7 @@ import { getPageTitle } from '../config'
 import SectionFullScreen from '../components/Section/SectionFullScreen'
 import CardBox from '../components/CardBox'
 import { Formik, Form, Field } from 'formik'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import FormField from '../components/FormField/Field'
 import FormCheckRadio from '../components/FormField/CheckRadio'
 import BaseDivider from '../components/BaseDivider'
