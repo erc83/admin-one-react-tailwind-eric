@@ -1,7 +1,7 @@
 import { mdiCog } from '@mdi/js'
 import React from 'react'
 import { ColorKey, TrendType } from '../../interfaces'
-import { colorsText } from '../../colors'
+import { colorsText } from '../../config/colors'
 import CardBox from '.'
 import NumberDynamic from '../NumberDynamic'
 import PillTagTrend from '../PillTag/Trend'

@@ -1,5 +1,5 @@
 "use client"
-import Head from 'next/head'
+//import Head from 'next/head'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import React, { ReactElement } from 'react'
@@ -7,10 +7,10 @@ import CardBox from './components/CardBox'
 import LayoutGuest from './layouts/Guest'
 import SectionMain from './components/Section/SectionMain'
 //import { StyleKey } from '../interfaces'
-import { gradientBgPurplePink } from './colors'
+import { gradientBgPurplePink } from './config/colors'
 import { useAppDispatch } from './stores/hooks'
 import { setDarkMode } from './stores/darkModeSlice'
-import { getPageTitle } from './config'
+
 
 
 export default function StyleSelectPage ( ) {
@@ -35,10 +35,6 @@ export default function StyleSelectPage ( ) {
     }
 
     return (
-        <>
-        <Head>
-            <title>{getPageTitle('Pick a Style')}</title>
-        </Head> 
         <div className={`flex min-h-screen items-center justify-center ${gradientBgPurplePink}`}>
             <SectionMain>
             <h1 className="text-4xl md:text-5xl text-center text-white font-bold mt-12 mb-3 lg:mt-0">
@@ -65,7 +61,7 @@ export default function StyleSelectPage ( ) {
             </div>
             </SectionMain>
         </div>
-        </>
+        
     )
 }
 

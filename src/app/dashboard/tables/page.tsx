@@ -2,17 +2,18 @@
 
 import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
 import React, { ReactElement } from 'react'
-import Head from 'next/head'
+//import Head from 'next/head'
 import SectionMain from '../../components/Section/SectionMain'
 import SectionTitleLineWithButton from '../../components/Section/SectionTitleLineWithButton'
 import BaseButton from '../../components/BaseButton'
-import LayoutAuthenticated from '../../layouts/Authenticated'
+//import LayoutAuthenticated from '../../layouts/Authenticated'
 import NotificationBar from '../../components/NotificationBar'
 import CardBox from '../../components/CardBox'
 import CardBoxComponentEmpty from '../../components/CardBox/Component/Empty'
-import { getPageTitle } from '../../config'
+import { getPageTitle } from '../../config/config'
 import TableSampleClients from '../../components/Table/SampleClients'
 import { useSampleClients } from '../../hooks/sampleData'
+//import { Metadata } from "next"
 
 
 const TablesPage = () => {
@@ -20,13 +21,10 @@ const TablesPage = () => {
 
   return (
     <>
-      <Head>
-        <title>{getPageTitle('Tables')}</title>
-      </Head>
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>
           <BaseButton
-            href="https://github.com/justboil/admin-one-react-tailwind"
+            href="https://github.com/erc83/admin-one-react-tailwind-eric"
             target="_blank"
             icon={mdiGithub}
             label="Star on Github"
@@ -57,8 +55,8 @@ const TablesPage = () => {
   )
 }
 
-TablesPage.getLayout = function getLayout(page: ReactElement) {
+/* TablesPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutAuthenticated>{page}</LayoutAuthenticated>
-}
+} */
 
 export default TablesPage

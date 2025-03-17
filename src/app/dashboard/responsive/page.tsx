@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import LayoutAuthenticated from '../../layouts/Authenticated'
 import SectionTitle from '../../components/Section/SectionTitle'
-import { getPageTitle } from '../../config'
+import { getPageTitle } from '../../config/config'
 import SectionMain from '../../components/Section/SectionMain'
 
 const ResponsivePage = () => {

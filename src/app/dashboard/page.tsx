@@ -24,7 +24,7 @@ import SectionBannerStarOnGitHub from '../components/Section/Banner/StarOnGitHub
 import CardBox from '../components/CardBox'
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/Table/SampleClients'
-import { getPageTitle } from '../config'
+import { getPageTitle } from '../config/config'
 import { clients, transactions } from "../lib/sampleData"
 import ChartLineSampleComponentBlock from '../components/ChartLineSample/ComponentBlock'
 import { Metadata } from "next"
@@ -64,7 +64,7 @@ export default function DashboardPage () {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
           <BaseButton
-            href="https://github.com/justboil/admin-one-react-tailwind"
+            href="https://github.com/erc83/admin-one-react-tailwind-eric"
             target="_blank"
             icon={mdiGithub}
             label="Star on GitHub"

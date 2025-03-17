@@ -1,6 +1,6 @@
 import { mdiGithub } from '@mdi/js'
 import React from 'react'
-import { gradientBgPinkRed } from '../../../colors'
+import { gradientBgPinkRed } from '../../../config/colors'
 import BaseButton from '../../BaseButton'
 import SectionBanner from '.'
 
@@ -12,7 +12,7 @@ const SectionBannerStartOnGitHub = () => {
       </h1>
       <div>
         <BaseButton
-          href="https://github.com/justboil/admin-one-react-tailwind"
+          href="https://github.com/erc83/admin-one-react-tailwind-eric"
           target="_blank"
           icon={mdiGithub}
           label="Github"

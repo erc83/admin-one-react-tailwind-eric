@@ -73,15 +73,9 @@ const menuAside: MenuAsideItem[] = [
         ],
     },
     {
-        href: "https://github.com/justboil/admin-one-react-tailwind",
+        href: "https://github.com/erc83/admin-one-react-tailwind-eric",
         label: "GitHub",
         icon: mdiGithub,
-        target: "_blank",
-    },
-    {
-        href: "https://github.com/justboil/admin-one-vue-tailwind",
-        label: "Vue version",
-        icon: mdiVuejs,
         target: "_blank",
     },
 ];

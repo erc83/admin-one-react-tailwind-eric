@@ -1,7 +1,7 @@
 "use client"
 import React, { ReactNode, useState } from 'react'
 import { mdiClose, mdiDotsVertical } from '@mdi/js'
-import { containerMaxW } from '../../config'
+import { containerMaxW } from '../../config/config'
 import BaseIcon from '../Icon/BaseIcon'
 import NavBarItemPlain from './item/Plain'
 import NavBarMenuList from './MenuList'

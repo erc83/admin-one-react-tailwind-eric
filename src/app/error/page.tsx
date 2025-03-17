@@ -2,7 +2,7 @@ import React from "react"
 import BaseButton from '../components/BaseButton'
 import CardBox from '../components/CardBox'
 import SectionFullScreen from '../components/Section/SectionFullScreen'
-import { getPageTitle } from '../config'
+import { getPageTitle } from '../config/config'
 import { Metadata } from 'next'
 
 //import type { ReactElement } from 'react'

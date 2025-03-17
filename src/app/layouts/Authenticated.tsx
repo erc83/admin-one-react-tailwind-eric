@@ -1,16 +1,15 @@
+"use client"
+
 import React, { ReactNode, useEffect } from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { mdiForwardburger, mdiBackburger, mdiMenu } from '@mdi/js'
-import menuAside from '../menuAside'
-import menuNavBar from '../menuNavBar'
+import menuAside from '../lib/menuAside'
+import menuNavBar from '../lib/menuNavBar'
 import BaseIcon from '../components/Icon/BaseIcon'
 import NavBar from '../components/NavBar'
 import NavBarItemPlain from '../components/NavBar/item/Plain'
 import AsideMenu from '../components/AsideMenu'
-import FooterBar from '../components/FooterBar'
-//import GlobalStyle from '../globals/Style'
-//import GlobalDarkMode from '../globals/DarkMode'
 import FormField from '../components/FormField'
 import { Field, Form, Formik } from 'formik'
 
@@ -90,17 +89,7 @@ export default function LayoutAuthenticated({ children }: Props) {
             onAsideLgClose={() => setIsAsideLgActive(false)}
           />
           {children}
-          <FooterBar>
-            Code on{` `}
-            <a
-              href="https://github.com/justboil/admin-one-react-tailwind"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600"
-            >
-              GitHub
-            </a>
-          </FooterBar>
+          
         </div>
       </div>
     </>

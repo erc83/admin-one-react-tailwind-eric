@@ -1,0 +1,1 @@
+export const URL_GITHUB = 'https://github.com/erc83/admin-one-react-tailwind-eric';

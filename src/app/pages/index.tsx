@@ -1,4 +1,4 @@
-import Head from 'next/head'
+/* import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import React, { ReactElement } from 'react'
@@ -72,3 +72,4 @@ StyleSelect.getLayout = function getLayout(page: ReactElement) {
 }
 
 export default StyleSelect
+ */

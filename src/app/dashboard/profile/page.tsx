@@ -11,7 +11,7 @@ import {
   mdiUpload,
 } from '@mdi/js'
 import LayoutAuthenticated from '../../layouts/Authenticated'
-import { getPageTitle } from '../../config'
+import { getPageTitle } from '../../config/config'
 import { useAppSelector } from '../../stores/hooks'
 import SectionMain from '../../components/Section/SectionMain'
 import SectionTitleLineWithButton from '../../components/Section/SectionTitleLineWithButton'
