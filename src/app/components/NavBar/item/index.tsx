@@ -14,9 +14,10 @@ import { setDarkMode } from '../../../stores/darkModeSlice'
 
 type Props = {
   item: MenuNavBarItem
+  onRouteChange: () => void
 }
 
-export default function NavBarItem({ item }: Props) {
+export default function NavBarItem({ item, ...props }: Props) {
   const dispatch = useAppDispatch()
 
   const userName = useAppSelector((state) => state.main.userName)
@@ -76,7 +77,7 @@ export default function NavBarItem({ item }: Props) {
             !isDropdownActive ? 'lg:hidden' : ''
           } text-sm border-b border-gray-100 lg:border lg:bg-white lg:absolute lg:top-full lg:left-0 lg:min-w-full lg:z-20 lg:rounded-lg lg:shadow-lg lg:dark:bg-slate-800 dark:border-slate-700`}
         >
-          <NavBarMenuList menu={item.menu} />
+          <NavBarMenuList menu={item.menu} onRouteChange={props.onRouteChange}/>
         </div>
       )}
     </>
@@ -88,7 +89,7 @@ export default function NavBarItem({ item }: Props) {
 
   if (item.href) {
     return (
-      <Link href={item.href} className={componentClass} target={item.target}>
+      <Link href={item.href} className={componentClass} target={item.target} onClick={props.onRouteChange}>
         {NavBarItemComponentContents}
       </Link>
     )
