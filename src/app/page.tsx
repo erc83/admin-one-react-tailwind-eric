@@ -38,11 +38,11 @@ export default function StyleSelectPage ( ) {
         <div className={`flex min-h-screen items-center justify-center ${gradientBgPurplePink}`}>
             <SectionMain>
             <h1 className="text-4xl md:text-5xl text-center text-white font-bold mt-12 mb-3 lg:mt-0">
-                Pick a style&hellip;
+                Elige un estilo&hellip;
             </h1>
             <h2 className="text-xl md:text-xl text-center text-white mb-12">
-                Style switching with a single{' '}
-                <code className="px-1.5 py-0.5 rounded bg-white bg-opacity-20">action()</code>
+                Cambio de estilo con una sola{' '}
+                <code className="px-1.5 py-0.5 rounded bg-white bg-opacity-20">acción()</code>
             </h2>
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 px-6 max-w-6xl mx-auto">
                 {styles.map((style) => (

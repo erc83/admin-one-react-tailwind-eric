@@ -27,7 +27,7 @@ const FormsPage = () => {
       </Head>
 
       <SectionMain>
-        <SectionTitleLineWithButton icon={mdiBallotOutline} title="Formik forms example" main>
+        <SectionTitleLineWithButton icon={mdiBallotOutline} title="Ejemplos de Formik forms" main>
           <BaseButton
             href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
@@ -53,7 +53,7 @@ const FormsPage = () => {
             <Form>
               <div className="grid grid-cols-1 gap-3 md:grid-cols-2 mb-6 last:mb-0">
                 <div>
-                  <FormField label="Name" labelFor="fullname" icon={mdiAccount}>
+                  <FormField label="Nombre" labelFor="fullname" icon={mdiAccount}>
                     {({ className }) => (
                       <Field
                         name="fullname"
@@ -80,21 +80,21 @@ const FormsPage = () => {
               </div>
 
               <FormField
-                label="With help line and labelFor Phone"
+                label="Con linea de ayuda y etiqueta para Telefono"
                 labelFor="phone"
                 help="Help line comes here"
               >
                 {({ className }) => (
-                  <Field name="phone" placeholder="Phone" id="phone" className={className} />
+                  <Field name="phone" placeholder="Telefono" id="phone" className={className} />
                 )}
               </FormField>
 
               <FormField label="Dropdown Color" labelFor="color">
                 {({ className }) => (
                   <Field name="color" id="color" component="select" className={className}>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
                   </Field>
                 )}
               </FormField>
@@ -107,7 +107,7 @@ const FormsPage = () => {
                     name="textarea"
                     id="textarea"
                     as="textarea"
-                    placeholder="Your text here"
+                    placeholder="Su texto aquí"
                     className={className}
                   />
                 )}
@@ -124,7 +124,7 @@ const FormsPage = () => {
         </CardBox>
       </SectionMain>
 
-      <SectionTitle>Custom elements</SectionTitle>
+      <SectionTitle>Elementos Customizados</SectionTitle>
       <SectionMain>
         <CardBox>
           <Formik

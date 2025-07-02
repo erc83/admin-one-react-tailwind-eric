@@ -22,12 +22,12 @@ const menuAside: MenuAsideItem[] = [
     },
     {
         href: "/dashboard/tables",
-        label: "Tables",
+        label: "Tablas",
         icon: mdiTable,
     },
     {
         href: "/dashboard/forms",
-        label: "Forms",
+        label: "Formularios",
         icon: mdiSquareEditOutline,
     },
     {
@@ -37,17 +37,17 @@ const menuAside: MenuAsideItem[] = [
     },
     {
         href: "/dashboard/responsive",
-        label: "Responsive",
+        label: "Responsividad",
         icon: mdiResponsive,
     },
     {
         href: "/",
-        label: "Styles",
+        label: "Estilos",
         icon: mdiPalette,
     },
     {
         href: "/dashboard/profile",
-        label: "Profile",
+        label: "Perfil",
         icon: mdiAccountCircle,
     },
     {
@@ -57,7 +57,7 @@ const menuAside: MenuAsideItem[] = [
     },
     {
         href: "/error",
-        label: "Error",
+        label: "Pagina Error",
         icon: mdiAlertCircle,
     },
     {

@@ -22,7 +22,7 @@ const TablesPage = () => {
   return (
     <>
       <SectionMain>
-        <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>
+        <SectionTitleLineWithButton icon={mdiTableBorder} title="Tablas" main>
           <BaseButton
             href="https://github.com/erc83/admin-one-react-tailwind-eric"
             target="_blank"
@@ -35,16 +35,16 @@ const TablesPage = () => {
         </SectionTitleLineWithButton>
 
         <NotificationBar color="info" icon={mdiMonitorCellphone}>
-          <b>Responsive table.</b> Collapses on mobile
+          <b>Tabla Responsiva.</b> Collapse en móvil
         </NotificationBar>
 
         <CardBox className="mb-6" hasTable>
           <TableSampleClients clients={clients} />
         </CardBox>
 
-        <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />
+        <SectionTitleLineWithButton icon={mdiTableOff} title="Variación vacía" />
         <NotificationBar color="danger" icon={mdiTableOff}>
-          <b>Empty card.</b> When there&apos;s nothing to show
+          <b>Tarjeta vacía.</b> Cuando no hay nada que mostrar.
         </NotificationBar>
 
         <CardBox>

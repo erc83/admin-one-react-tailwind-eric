@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import "./css/main.css";
+import  Head from "next/head"
 import Script from "next/script"
 import StoreProvider from "./stores/StoreProvider";
 
-const title = `Admin One React Tailwind free`;
+const title = `Admin One React Tailwind Eric`;
 
-const description = "Admin One - free React Next Tailwind dashboard with TypeScript and dark mode";
+const description = "Panel admin One - Next.js y Tailwind with TypeScript and dark mode";
 
 const url = "https://justboil.github.io/admin-one-react-tailwind/";
 
@@ -46,20 +47,21 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
     return (
         <StoreProvider>
-            <html lang="en" className="style-basic">
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"
-                    strategy="afterInteractive"
-                />
-    
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'UA-130795909-1');
-                    `}
-                </Script>
+            <html lang="es" className="style-basic">
+                <Head>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6BPTRYMX8"></script>
+                    <script
+                            dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-T6BPTRYMX8');
+                        `,
+                        }}
+                    />
+                </Head>
+
                 <body
                     className={`bg-gray-50 dark:bg-slate-800 dark:text-slate-100 antialiased`}
                 >

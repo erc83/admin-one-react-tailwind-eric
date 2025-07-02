@@ -3,7 +3,7 @@
 import React, { ReactElement } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import LayoutAuthenticated from '../../layouts/Authenticated'
+import LayoutAuthenticated from '../layout'
 import SectionTitle from '../../components/Section/SectionTitle'
 import { getPageTitle } from '../../config/config'
 import SectionMain from '../../components/Section/SectionMain'
@@ -15,7 +15,7 @@ const ResponsivePage = () => {
         <title>{getPageTitle('Responsive')}</title>
       </Head>
 
-      <SectionTitle first>Mobile & Table</SectionTitle>
+      <SectionTitle first>Movil & Tabla</SectionTitle>
       <SectionMain>
         <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
           <Image
@@ -28,7 +28,7 @@ const ResponsivePage = () => {
         </div>
       </SectionMain>
 
-      <SectionTitle>Small laptop 1024px</SectionTitle>
+      <SectionTitle>Pequeña computadora portatil 1024px</SectionTitle>
       <SectionMain>
         <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
           <Image
@@ -41,7 +41,7 @@ const ResponsivePage = () => {
         </div>
       </SectionMain>
 
-      <SectionTitle>Laptop & desktop</SectionTitle>
+      <SectionTitle>Notebook y Escritorio</SectionTitle>
       <SectionMain>
         <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
           <Image

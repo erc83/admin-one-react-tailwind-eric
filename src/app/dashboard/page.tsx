@@ -62,12 +62,12 @@ export default function DashboardPage () {
   return (
     <>
       <SectionMain>
-        <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
+        <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Resumen" main>
           <BaseButton
             href="https://github.com/erc83/admin-one-react-tailwind-eric"
             target="_blank"
             icon={mdiGithub}
-            label="Star on GitHub"
+            label="Revisar en GitHub"
             color="contrast"
             roundedFull
             small
@@ -82,7 +82,7 @@ export default function DashboardPage () {
             icon={mdiAccountMultiple}
             iconColor="success"
             number={512}
-            label="Clients"
+            label="Clientes"
           />
           <CardBoxWidget
             trendLabel="16%"
@@ -92,7 +92,7 @@ export default function DashboardPage () {
             iconColor="info"
             number={7770}
             numberPrefix="$"
-            label="Sales"
+            label="Ventas"
           />
           <CardBoxWidget
             trendLabel="Overflow"
@@ -102,7 +102,7 @@ export default function DashboardPage () {
             iconColor="danger"
             number={256}
             numberSuffix="%"
-            label="Performance"
+            label="Rendimiento"
           />
         </div>
 
@@ -125,7 +125,7 @@ export default function DashboardPage () {
 
         <ChartLineSampleComponentBlock />
 
-        <SectionTitleLineWithButton icon={mdiAccountMultiple} title="Clients" />
+        <SectionTitleLineWithButton icon={mdiAccountMultiple} title="Clientes" />
           {/* <BaseButton icon={mdiReload} color="whiteDark" onClick={fillChartData} / */}
         
 
@@ -133,7 +133,7 @@ export default function DashboardPage () {
         <SectionTitleLineWithButton icon={mdiAccountMultiple} title="Clients" /> */}
 
         <NotificationBar color="info" icon={mdiMonitorCellphone}>
-          <b>Responsive table.</b> Collapses on mobile
+          <b>Tabla Responsiva.</b> Se oculta en mobile.
         </NotificationBar>
 
         <CardBox hasTable>

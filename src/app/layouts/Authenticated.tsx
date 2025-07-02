@@ -75,7 +75,7 @@ export default function LayoutAuthenticated({ children }: Props) {
                 <Form>
                   <FormField isBorderless isTransparent>
                     {({ className }) => (
-                      <Field name="search" placeholder="Search" className={className} />
+                      <Field name="search" placeholder="Buscar" className={className} />
                     )}
                   </FormField>
                 </Form>
@@ -87,6 +87,7 @@ export default function LayoutAuthenticated({ children }: Props) {
             isAsideLgActive={isAsideLgActive}
             menu={menuAside}
             onAsideLgClose={() => setIsAsideLgActive(false)}
+            onRouteChange={() => {}}
           />
           {children}
           

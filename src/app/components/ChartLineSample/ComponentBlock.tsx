@@ -19,7 +19,7 @@ export default function ChartLineSampleComponentBlock() {
 
     return (
         <>
-            <SectionTitleLineWithButton icon={mdiChartPie} title="Trends overview" >
+            <SectionTitleLineWithButton icon={mdiChartPie} title="Resumen de tendencias" >
                 <BaseButton icon={mdiReload} color="whiteDark" onClick={fillChartData} /> 
             </SectionTitleLineWithButton>
         

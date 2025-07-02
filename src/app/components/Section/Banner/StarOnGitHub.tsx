@@ -8,7 +8,7 @@ const SectionBannerStartOnGitHub = () => {
   return (
     <SectionBanner className={gradientBgPinkRed}>
       <h1 className="text-3xl text-white mb-6">
-        Like the project? Please star on <b>Github</b> ;-)
+        Te gusta el Proyecto? Por favor marcar con una estrella en <b>Github</b> ;-)
       </h1>
       <div>
         <BaseButton

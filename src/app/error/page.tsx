@@ -21,9 +21,9 @@ export default function ErrorPage() {
           footer={<BaseButton href="/dashboard" label="Done" color="danger" />}
         >
           <div className="space-y-3">
-            <h1 className="text-2xl">Unhandled exception</h1>
+            <h1 className="text-2xl">Excepción no controlada</h1>
 
-            <p>An Error Occurred</p>
+            <p>Se produjo un error</p>
           </div>
         </CardBox>
       </SectionFullScreen>

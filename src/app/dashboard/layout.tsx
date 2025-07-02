@@ -70,7 +70,7 @@ export default function LayoutAuthenticated({ children }: Props ) {
                                     {({ className }) => (
                                         <Field
                                             name="search"
-                                            placeholder="Search"
+                                            placeholder="Buscar"
                                             className={className}
                                         />
                                     )}
@@ -88,14 +88,14 @@ export default function LayoutAuthenticated({ children }: Props ) {
                 />
                 {children}
                 <FooterBar>
-                    Get more with{` `}
+                    Ver el código fuente{` `}
                     <a
-                        href="https://tailwind-react.justboil.me/dashboard"
+                        href="https://github.com/erc83/admin-one-react-tailwind-eric"
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600"
                     >
-                        Premium version
+                        Click aquí
                     </a>
                 </FooterBar>
             </div>

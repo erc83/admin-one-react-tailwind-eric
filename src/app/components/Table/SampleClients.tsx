@@ -2,15 +2,11 @@
 
 import { mdiEye, mdiTrashCan } from '@mdi/js'
 import React, { useState } from 'react'
-//import { useSampleClients } from '../../hooks/sampleData'
 import { Client } from '../../interfaces'
 import BaseButton from '../BaseButton'
 import BaseButtons from '../BaseButtons'
-/* import BaseLevel from './BaseLevel' */
 import UserAvatar from '../UserAvatar'
 import CardBoxModal from '../CardBox/Modal'
-
-//const { clients } = useSampleClients()
 
 type Props = {
   clients: Client[]
@@ -71,11 +67,11 @@ const TableSampleClients = ({ clients }: Props) => {
         <thead>
           <tr>
             <th />
-            <th>Name</th>
-            <th>Company</th>
-            <th>City</th>
-            <th>Progress</th>
-            <th>Created</th>
+            <th>Nombre</th>
+            <th>Compañia</th>
+            <th>Ciudad</th>
+            <th>Progreso</th>
+            <th>Creado</th>
             <th />
           </tr>
         </thead>
@@ -138,7 +134,7 @@ const TableSampleClients = ({ clients }: Props) => {
             ))}
           </BaseButtons>
           <small className="mt-6 md:mt-0">
-            Page {currentPage + 1} of {numPages}
+            Pagina {currentPage + 1} de {numPages}
           </small>
         </div>
       </div>

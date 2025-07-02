@@ -88,7 +88,7 @@ const UiPage = () => {
         <title>{getPageTitle('Ui')}</title>
       </Head>
 
-      <SectionTitle first>Dark mode</SectionTitle>
+      <SectionTitle first>Modo Oscuro</SectionTitle>
 
       <SectionMain>
         <CardBox className="md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl md:mx-auto">
@@ -102,7 +102,7 @@ const UiPage = () => {
         </CardBox>
       </SectionMain>
 
-      <SectionTitle>Modal examples</SectionTitle>
+      <SectionTitle>Ejemplos de Modal </SectionTitle>
 
       <SectionMain>
         <div className="space-y-12">
@@ -112,12 +112,12 @@ const UiPage = () => {
             onClick={() => setIsModalInfoActive(true)}
             isHoverable
           >
-            <CardBoxComponentTitle title="Please confirm action">
+            <CardBoxComponentTitle title="Por favor confirmar acción">
               <BaseButton icon={mdiClose} color="whiteDark" small roundedFull />
             </CardBoxComponentTitle>
 
             <div className="space-y-3">
-              <p>Click to see in action</p>
+              <p>Click para ver en acción</p>
             </div>
           </CardBox>
 
@@ -127,9 +127,9 @@ const UiPage = () => {
             onClick={() => setIsModalDangerActive(true)}
             isHoverable
           >
-            <CardBoxComponentTitle title="Unhandled exception" />
+            <CardBoxComponentTitle title="Excepción no controlada" />
             <div className="space-y-3">
-              <p>Click to see in action</p>
+              <p>Click para ver en acción</p>
             </div>
           </CardBox>
 
@@ -139,9 +139,9 @@ const UiPage = () => {
             onClick={() => setIsModalSuccessActive(true)}
             isHoverable
           >
-            <CardBoxComponentTitle title="Success" />
+            <CardBoxComponentTitle title="Éxito" />
             <div className="space-y-3">
-              <p>Click to see in action</p>
+              <p>Click para ver en acción</p>
             </div>
           </CardBox>
         </div>
@@ -149,7 +149,7 @@ const UiPage = () => {
 
       {/* Window modal */}
       <CardBoxModal
-        title="Please confirm action"
+        title="Por favor, confirmar acción"
         buttonColor="info"
         buttonLabel="Confirm"
         isActive={isModalInfoActive}
@@ -160,7 +160,7 @@ const UiPage = () => {
       </CardBoxModal>
 
       <CardBoxModal
-        title="Unhandled exception"
+        title="Excepción no controlada"
         buttonColor="danger"
         buttonLabel="error"
         isActive={isModalDangerActive}
@@ -171,7 +171,7 @@ const UiPage = () => {
       </CardBoxModal>
 
       <CardBoxModal
-        title="Success"
+        title="Éxito"
         buttonColor="success"
         buttonLabel="Done"
         isActive={isModalSuccessActive}
@@ -185,7 +185,7 @@ const UiPage = () => {
         {({ values }) => (
           <>
             <SectionTitle custom>
-              <h1 className="text-2xl text-gray-500 dark:text-slate-400">Notifications</h1>
+              <h1 className="text-2xl text-gray-500 dark:text-slate-400">Notificaciones</h1>
               <div className="flex items-center justify-center mt-6">
                 <FormCheckRadio type="switch" label="Outline">
                   <Field type="checkbox" name="outline" />
@@ -550,25 +550,25 @@ const UiPage = () => {
         </CardBox>
       </SectionMain>
 
-      <SectionTitle>Cards</SectionTitle>
+      <SectionTitle>Tarjetas</SectionTitle>
 
       <SectionMain>
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-2">
           <CardBox footer={CardSamplesFooter}>
-            <CardBoxComponentTitle title="With title & icon">
+            <CardBoxComponentTitle title="Con título e iconos">
               <BaseButton icon={mdiReload} color="whiteDark" roundedFull />
             </CardBoxComponentTitle>
 
             <div className="space-y-3">
-              <p>Card with title, icon & footer</p>
+              <p>Tarjeta con título, icono y pie de página</p>
             </div>
 
-            <CardBox footer={CardSamplesFooter}>Just body & Footer </CardBox>
+            <CardBox footer={CardSamplesFooter}>Solo cuerpo y pie de página</CardBox>
           </CardBox>
         </div>
       </SectionMain>
 
-      <SectionTitleLineWithButton icon={mdiAlertCircle} title="Empty variation" />
+      <SectionTitleLineWithButton icon={mdiAlertCircle} title="Variación vacía" />
       <SectionMain>
         <CardBox>
           <CardBoxComponentEmpty />

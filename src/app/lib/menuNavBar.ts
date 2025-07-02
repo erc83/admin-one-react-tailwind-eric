@@ -16,22 +16,22 @@ import { MenuNavBarItem } from "../interfaces";
 const menuNavBar: MenuNavBarItem[] = [
     {
         icon: mdiMenu,
-        label: "Sample menu",
+        label: "Menu Ejemplo",
         menu: [
             {
                 icon: mdiClockOutline,
-                label: "Item One",
+                label: "Item Uno",
             },
             {
                 icon: mdiCloud,
-                label: "Item Two",
+                label: "Item Dos",
             },
             {
                 isDivider: true,
             },
             {
                 icon: mdiCrop,
-                label: "Item Last",
+                label: "Ultimo Item",
             },
         ],
     },
@@ -40,23 +40,23 @@ const menuNavBar: MenuNavBarItem[] = [
         menu: [
             {
                 icon: mdiAccount,
-                label: "My Profile",
+                label: "Mi Perfil",
                 href: "/dashboard/profile",
             },
             {
                 icon: mdiCogOutline,
-                label: "Settings",
+                label: "Configuraciones",
             },
             {
                 icon: mdiEmail,
-                label: "Messages",
+                label: "Mensajes",
             },
             {
                 isDivider: true,
             },
             {
                 icon: mdiLogout,
-                label: "Log Out",
+                label: "Finalizar sesión",
                 isLogout: true,
             },
         ],
@@ -78,6 +78,7 @@ const menuNavBar: MenuNavBarItem[] = [
         icon: mdiLogout,
         label: "Log out",
         isDesktopNoLabel: true,
+        href: "https://eric-espinoza-mansilla.netlify.app",
         isLogout: true,
     },
 ];

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import LayoutAuthenticated from "../../layouts/Authenticated";
+//import LayoutAuthenticated from "../layout";
 
 type Props = {
     children: ReactNode
@@ -7,6 +7,6 @@ type Props = {
 
 
 export default function TablesLayout({children}: Props ) {
-    return <LayoutAuthenticated>{children}</LayoutAuthenticated>
+    return <>{children}</>
 }
 

@@ -30,7 +30,7 @@ const LoginPage = () => {
   }
 
   const initialValues: LoginForm = {
-    login: 'john.doe',
+    login: 'eric.espinoza@example.com',
     password: 'bG1sL9eQ1uD2sK3b',
     remember: true,
   }
