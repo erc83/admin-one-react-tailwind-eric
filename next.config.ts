@@ -1,26 +1,28 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  basePath: "",
-/*  async redirects() {
+  /*  async redirects() {
     return [
       {
         source: "/",
         destination: 'admin-one-react-tailwind-eric',
         basePath: false,
         permanent: false
-      }
-    ]
-  },*/
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'static.justboil.me',
-      },
-    ],
-  },
+        }
+        ]
+        },*/
+        output: 'export',
+        images: {
+          unoptimized: true,
+          /* remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'static.justboil.me',
+            },
+          ], */
+        },
+        basePath: "/admin-one-react-tailwind-eric",
+        trailingSlash: true
 }
 
 export default nextConfig
