@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
+    "@netlify/next": "^1.4.9",
     "@reduxjs/toolkit": "2.5.1",
     "chart.js": "^4.4.4",
     "formik": "^2.4.6",
