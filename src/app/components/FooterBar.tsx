@@ -16,7 +16,7 @@ export default function FooterBar({ children }: Props) {
         <div className="text-center md:text-left mb-6 md:mb-0">
           <b>
             &copy;{year},{` `}
-            <a href="http://localhost:3000" rel="noreferrer" target="_blank">
+            <a href="https://eric-espinoza-mansilla.netlify.app/" rel="noreferrer" target="_blank">
               Eric Espinoza
             </a>
             .
@@ -25,7 +25,7 @@ export default function FooterBar({ children }: Props) {
           {children}
         </div>
         <div className="md:py-2">
-          <a href="http://localhost:3000" rel="noreferrer" target="_blank">
+          <a href="https://eric-espinoza-mansilla.netlify.app" rel="noreferrer" target="_blank">
             <ImageLogo className="w-auto h-8 md:h-6 mx-auto" />
           </a>
         </div>
